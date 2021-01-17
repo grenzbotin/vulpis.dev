@@ -1,8 +1,14 @@
-FROM node:15.4-alpine
+FROM node:15.4-alpine as builder
 
 WORKDIR /usr/src/app
 COPY package*.json ./
+COPY yarn.lock ./
+
 RUN yarn cache clean && yarn --update-checksums
 COPY . ./
+RUN yarn && yarn build
 
-CMD ["yarn", "start"]
+# Production
+FROM abiosoft/caddy:1.0.3-no-stats
+COPY --from=builder /usr/src/app/build /srv
+COPY --from=builder /usr/src/app/Caddyfile /etc/Caddyfile

@@ -6,7 +6,6 @@ import { withTranslation } from 'react-i18next';
 
 import night from '../components/assets/moon.svg';
 import day from '../components/assets/sun.svg';
-
 import { H3, H2 } from '../components/elements/Typography';
 
 
@@ -23,8 +22,8 @@ function Disclosure({ i18n, t }) {
         <H3>Angaben gemäß § 5 TMG</H3>
         <Text>
           vulpis web development Franziska Fieke<br />
-          Selchowstr. 33 <br />
-          12489 Berlin
+          {process.env.REACT_APP_CONTACT_ADDRESS_1} <br />
+          {process.env.REACT_APP_CONTACT_ADDRESS_2}
         </Text>
         <H3>Kontakt</H3>
         <Text
@@ -44,7 +43,7 @@ function Disclosure({ i18n, t }) {
         <H3>Umsatzsteuer-ID</H3>
         <Text>
           Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-          -- tbd --
+          {process.env.REACT_APP_USTID}
         </Text>
         <H3>Haftungsausschluss</H3>
         <Text>

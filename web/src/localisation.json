@@ -3,8 +3,8 @@
     "translation": {
       "meta": {
         "title": "vulpis web development | Franziska Fieke",
-        "description": "Web development with ReactJS",
-        "keywords": "Web development, react web, transform into react app, frontend, find frontend developer, freelancer, software engineer, frontend candidate screening, Franziska Fieke"
+        "description": "Experienced frontend developer (ReactJS) with focus on performance, accessibility and style.",
+        "keywords": "Web development, react app, frontend, freelancer, software engineer, frontend candidate screening, Franziska Fieke"
       },
       "navbar": {
         "switch_language": "Switch language to German",
@@ -40,7 +40,8 @@
           "list_7": "State management: Redux, Redux-Saga",
           "list_8": "Data visualization with e.g. recharts, plotly",
           "list_9": "Testing: Cypress, Jest",
-          "list_10": "Backend: Django, Python, REST, PostgreSQL"
+          "list_10": "Backend communication via REST API, websockets",
+          "list_11": "Other: Github, Docker, CI/CD, Django, Python"
         },
         "offer": {
           "title": "Service & offer",
@@ -80,7 +81,7 @@
           "subject": "Email subject",
           "message": "Your message",
           "company": "Company name",
-          "human_check": "Hundred-and-twenty-one minus eighty-nine?",
+          "human_check": "Eighty-four minus fifty-two?",
           "submit": "Send message",
           "opening": {
             "title": "Reasons to contact me",
@@ -166,7 +167,7 @@
     "translation": {
       "meta": {
         "title": "vulpis web development | Franziska Fieke",
-        "description": "Web development mit ReactJS",
+        "description": "Erfahrene Frontend-Entwicklerin mit Fokus auf Performance, Barrierefreiheit und Design",
         "keywords": "Web Entwicklung, React web, Frontend, Auftragsarbeit, Frontend-Entwickler finden, Franziska Fieke"
       },
       "navbar": {
@@ -203,7 +204,8 @@
           "list_7": "State management: Redux, Redux-Saga",
           "list_8": "Daten-Visualisierung mit z.B. recharts, plotly",
           "list_9": "Tests: Cypress, Jest",
-          "list_10": "Backend: Django, Python, REST, PostgreSQL"
+          "list_10": "Backend Kommunikation via REST API, websockets",
+          "list_11": "Anderes: Github, Docker, CI/CD, Django, Python"
         },
         "offer": {
           "title": "Service",

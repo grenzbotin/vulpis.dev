@@ -1,0 +1,59 @@
+name: Frontend - Test, build and push
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 15.4
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15.4'
+      - name: Install yarn and run unittest
+        working-directory: web
+        run: |
+          yarn
+          yarn test
+        env:
+          CI: true
+      - name: Publish to Github Packages Registry
+        uses: docker/build-push-action@v2
+        with:
+          push: false
+          context: './web'
+          tags: grenzbotin/vulpis.dev/vulpis-fe:latest
+          file: ./web/Dockerfile
+      - name: Deploy package to digitalocean
+        uses: appleboy/ssh-action@master
+        env:
+          GITHUB_USERNAME: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ github.token }}
+          BE_URL: ${{ secrets.WEB_BE_URL }}
+          CONTACT_ADDRESS_1: ${{ secrets.WEB_CONTACT_ADDRESS_1 }}
+          CONTACT_ADDRESS_2: ${{ secrets.WEB_CONTACT_ADDRESS_2 }}
+          CONTACT_MAIL: ${{ secrets.WEB_CONTACT_MAIL }}
+          CONTACT_PHONE: ${{ secrets.WEB_CONTACT_PHONE }}
+          USTID: ${{ secrets.WEB_USTID }}
+        with:
+          host: ${{ secrets.HOST_SSH }}
+          username: ${{ secrets.USERNAME_SSH }}
+          password: ${{ secrets.PASSWORD_SSH }}
+          port: ${{ secrets.PORT_SSH }}
+          envs: GITHUB_USERNAME, GITHUB_TOKEN, BE_URL, CONTACT_ADDRESS_1, CONTACT_ADDRESS_2, CONTACT_MAIL, CONTACT_PHONE, USTID
+          script: |
+            docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
+            docker pull docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-fe:latest
+            docker stop web
+            docker run -dit -p 3000:3000 --name web \
+            -e REACT_APP_BACKEND_URL=$BE_URL \
+            -e REACT_APP_CONTACT_MAIL_ADDRESS=$CONTACT_MAIL \
+            -e REACT_APP_CONTACT_PHONE=$CONTACT_PHONE \
+            -e REACT_APP_CONTACT_ADDRESS_1=$CONTACT_ADDRESS_1 \
+            -e REACT_APP_CONTACT_ADDRESS_2=$CONTACT_ADDRESS_2 \
+            -e REACT_APP_USTID=$USTID \
+            docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-fe:latest

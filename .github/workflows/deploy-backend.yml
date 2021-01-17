@@ -1,0 +1,48 @@
+name: Backend - Build and push
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 15.4
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15.4'
+      - name: Publish to Github Packages Registry
+        uses: docker/build-push-action@v2
+        with:
+          push: false
+          context: './backend'
+          tags: grenzbotin/vulpis.dev/vulpis-be:latest
+          file: ./backend/Dockerfile
+      - name: Deploy package to digitalocean
+        uses: appleboy/ssh-action@master
+        env:
+          GITHUB_USERNAME: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ github.token }}
+          MAIL_HOST: ${{ secrets.BE_MAIL_HOST }}
+          MAIL_PASSWORD: ${{ secrets.BE_MAIL_PASSWORD }}
+          MAIL_PORT: ${{ secrets.BE_MAIL_PORT }}
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+        with:
+          host: ${{ secrets.HOST_SSH }}
+          username: ${{ secrets.USERNAME_SSH }}
+          password: ${{ secrets.PASSWORD_SSH }}
+          port: ${{ secrets.PORT_SSH }}
+          envs: GITHUB_USERNAME, GITHUB_TOKEN, MAIL_HOST, MAIL_PASSWORD, MAIL_USERNAME, MAIL_PORT
+          script: |
+            docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
+            docker pull docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-be:latest
+            docker stop backend
+            docker run -dit -p 3030:3030 --name backend \
+            -e MAIL_HOST=$MAIL_HOST \
+            -e MAIL_PORT=$MAIL_PORT \
+            -e MAIL_USERNAME=MAIL_USERNAME \
+            -e MAIL_PASSWORD=MAIL_PASSWORD \
+            docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-be:latest

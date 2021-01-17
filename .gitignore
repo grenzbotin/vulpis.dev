@@ -14,8 +14,6 @@
 .env
 .eslintcache
 
-.github
-
 # Caddy folder
 /caddy
 

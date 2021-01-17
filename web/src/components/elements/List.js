@@ -1,7 +1,8 @@
 import React from 'react';
-import { Badge, Text } from 'theme-ui';
+import { Text } from 'theme-ui';
 import T from 'prop-types';
 import { withTranslation } from 'react-i18next';
+import BadgeFlag from './BadgeFlag';
 
 const BADGES = {
   FE: 'secondary',
@@ -35,7 +36,7 @@ function List({ listElements, t }) {
       }}
     >
       <ul>
-        {listElements.map(el => <li key={el.text}>{t(el.text)} {el.badges && el.badges.map(badge => <Badge className="badge" variant={BADGES[badge]} key={badge} ml={'.5rem'}>{badge}</Badge>)}</li>)}
+        {listElements.map(el => <li key={el.text}>{t(el.text)} {el.badges && el.badges.map(badge => <BadgeFlag variant={BADGES[badge]} key={badge} ml={'.5rem'} label={badge} />)}</li>)}
       </ul>
       </Text>
   );

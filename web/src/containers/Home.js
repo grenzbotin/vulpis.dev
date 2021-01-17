@@ -1,10 +1,11 @@
 import React, { lazy, Suspense } from 'react';
-import { Badge, Box, Grid, Text } from 'theme-ui';
+import { Box, Grid, Text } from 'theme-ui';
 import T from 'prop-types';
 import { withTranslation } from 'react-i18next';
 
 import { H2, H3 } from '../components/elements/Typography';
 import profile from '../components/assets/profile_2_sq.jpg';
+import BadgeFlag from '../components/elements/BadgeFlag';
 
 const Heading = lazy(() => import('../components/Heading'));
 const List = lazy(() => import('../components/elements/List'));
@@ -35,7 +36,7 @@ function Home({ headerElement, t }) {
           <Text>{t('home.stack.text')}</Text>
           <Box title={t('home.experience.private.title')}>
             <Suspense fallback={<div>..</div>}>
-              <List listElements={Array(10).fill().map((_, i) => ({ text: `home.stack.list_${i + 1}` }))} />
+              <List listElements={Array(11).fill().map((_, i) => ({ text: `home.stack.list_${i + 1}` }))} />
             </Suspense>
           </Box>
         </Box>
@@ -81,9 +82,9 @@ function Home({ headerElement, t }) {
           </Box>
         </Grid>
         <Box mt={2} sx={{ textAlign: 'right', fontSize: 1 }} title={t('home.experience.legend.title')}>
-          <Badge variant="secondary" mr={'0.5rem'}>FE</Badge> Frontend <br />
-          <Badge variant="primary" mr={'0.5rem'}>BE</Badge> Backend <br />
-          <Badge variant="tertiary" mr={'0.5rem'}>EE</Badge> {t('home.experience.legend.EE')}
+          <BadgeFlag variant="secondary" mr={'0.5rem'} label="FE" />Frontend <br />
+          <BadgeFlag variant="primary" mr={'0.5rem'} label="BE" />Backend <br />
+          <BadgeFlag variant="tertiary" mr={'0.5rem'} label="EE" />{t('home.experience.legend.EE')}
         </Box>
       </Box>
       <Box px={[4, 5, 6]} mb={5}>
