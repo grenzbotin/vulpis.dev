@@ -1,31 +1,42 @@
-name: Backend - Build and push
+name: Backend - Build, push, deploy
 
 on:
   push:
-    branches: 
-      - master
+    tags:
+      - v*
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Check out repository
+        uses: actions/checkout@v2
       - name: Use Node.js 15.4
         uses: actions/setup-node@v1
         with:
           node-version: '15.4'
+      - name: Set up Docker Builder
+        uses: docker/setup-buildx-action@v1
+      - name: Log into GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.CR_PAT }}
       - name: Publish to Github Packages Registry
         uses: docker/build-push-action@v2
         with:
-          push: false
+          push: true
           context: './backend'
-          tags: grenzbotin/vulpis.dev/vulpis-be:latest
+          tags: ghcr.io/${{ github.repository }}/backend:latest
           file: ./backend/Dockerfile
-      - name: Deploy package to digitalocean
+      - name: Deploy package to cloud
         uses: appleboy/ssh-action@master
         env:
           GITHUB_USERNAME: ${{ github.actor }}
           GITHUB_TOKEN: ${{ github.token }}
+          CR_PAT: ${{ secrets.CR_PAT }}
+          REPO: ${{ github.repository }}
           MAIL_HOST: ${{ secrets.BE_MAIL_HOST }}
           MAIL_PASSWORD: ${{ secrets.BE_MAIL_PASSWORD }}
           MAIL_PORT: ${{ secrets.BE_MAIL_PORT }}
@@ -35,14 +46,15 @@ jobs:
           username: ${{ secrets.USERNAME_SSH }}
           password: ${{ secrets.PASSWORD_SSH }}
           port: ${{ secrets.PORT_SSH }}
-          envs: GITHUB_USERNAME, GITHUB_TOKEN, MAIL_HOST, MAIL_PASSWORD, MAIL_USERNAME, MAIL_PORT
+          envs: GITHUB_USERNAME, GITHUB_TOKEN, MAIL_HOST, MAIL_PASSWORD, MAIL_USERNAME, MAIL_PORT, CR_PAT, REPO
           script: |
-            docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-            docker pull docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-be:latest
+            docker login ghcr.io -u $GITHUB_USERNAME -p $CR_PAT
+            docker pull ghcr.io/$REPO/backend:latest
             docker stop backend
-            docker run -dit -p 3030:3030 --name backend \
+            docker rm backend
+            docker run -dit -p 3030:3030 --restart always --name backend \
             -e MAIL_HOST=$MAIL_HOST \
             -e MAIL_PORT=$MAIL_PORT \
-            -e MAIL_USERNAME=MAIL_USERNAME \
-            -e MAIL_PASSWORD=MAIL_PASSWORD \
-            docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-be:latest
+            -e MAIL_USERNAME=$MAIL_USERNAME \
+            -e MAIL_PASSWORD=$MAIL_PASSWORD \
+            ghcr.io/$REPO/backend:latest

@@ -158,7 +158,7 @@ function ContactForm({ initialValues, validate }) {
       setLoading(true);
 
       axios
-        .post(`${process.env.REACT_APP_BACKEND_URL}/send`, { ...values })
+        .post(`${window.configuration.BACKEND_URL}/send`, { ...values })
         .then(response => {
           setLoading(false);
           setResult(response.data);
