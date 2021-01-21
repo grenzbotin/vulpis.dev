@@ -61,9 +61,4 @@ jobs:
             docker pull ghcr.io/$REPO/web:latest
             docker stop web
             docker rm web
-            docker run -dit -p 3000:3000 --name web \
-            -e REACT_APP_BACKEND_URL=$BE_URL -e REACT_APP_MAIL_ADDRESS=$CONTACT_MAIL \
-            -e REACT_APP_CONTACT_PHONE=$CONTACT_PHONE -e REACT_APP_CONTACT_ADDRESS_1=$CONTACT_ADDRESS_1 \
-            -e REACT_APP_CONTACT_ADDRESS_2=$CONTACT_ADDRESS_2 -e REACT_APP_USTID=$ORG_USTID \
-            ghcr.io/$REPO/web:latest
-            
+            docker run -dit -p 3000:3000 -v %{PWD}/runtime-config.js:/srv/runtime-config.js --name web ghcr.io/$REPO/web:latest

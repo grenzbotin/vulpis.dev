@@ -22,8 +22,8 @@ function Disclosure({ i18n, t }) {
         <H3>Angaben gemäß § 5 TMG</H3>
         <Text>
           vulpis web development Franziska Fieke<br />
-          {process.env.REACT_APP_CONTACT_ADDRESS_1} 33 <br />
-          {process.env.REACT_APP_CONTACT_ADDRESS_2} Berlin
+          {window.configuration.CONTACT_ADDRESS_1} <br />
+          {window.configuration.CONTACT_ADDRESS_2}
         </Text>
         <H3>Kontakt</H3>
         <Text
@@ -37,13 +37,13 @@ function Disclosure({ i18n, t }) {
             }
           }}
         >
-          E-Mail: <Obfuscate email={`${process.env.REACT_APP_MAIL_ADDRESS}`} headers={{ subject: t('disclosure.email_subject') }} /><br />
-          Telefon: <Obfuscate tel={`${process.env.REACT_APP_CONTACT_PHONE}`} />
+          E-Mail: <Obfuscate email={`${window.configuration.MAIL_ADDRESS}`} headers={{ subject: t('disclosure.email_subject') }} /><br />
+          Telefon: <Obfuscate tel={`${window.configuration.CONTACT_PHONE}`} />
         </Text>
         <H3>Umsatzsteuer-ID</H3>
         <Text>
           Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-          {process.env.REACT_APP_USTID}
+          {window.configuration.USTID}
         </Text>
         <H3>Haftungsausschluss</H3>
         <Text>
