@@ -22,7 +22,7 @@ function Disclosure({ i18n, t }) {
         <H3>Angaben gemäß § 5 TMG</H3>
         <Text>
           vulpis web development Franziska Fieke<br />
-          {process.env.REACT_APP_CONTACT_ADDRESS_1} <br />
+          {process.env.REACT_APP_CONTACT_ADDRESS_1} 33 <br />
           {process.env.REACT_APP_CONTACT_ADDRESS_2}
         </Text>
         <H3>Kontakt</H3>
