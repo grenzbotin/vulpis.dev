@@ -61,4 +61,4 @@ jobs:
             docker pull ghcr.io/$REPO/web:latest
             docker stop web
             docker rm web
-            docker run -dit -p 3000:3000 -v %{PWD}/runtime-config.js:/srv/runtime-config.js --name web ghcr.io/$REPO/web:latest
+            docker run -dit -p 3000:3000 --volume runtime-config.js:/srv/runtime-config.js --name web ghcr.io/$REPO/web:latest
