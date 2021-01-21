@@ -1,4 +1,4 @@
-name: Frontend - Test, build and push
+name: Frontend - Test, build, push, deploy
 
 on:
   push:
@@ -9,7 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - name: Check out repository
+        uses: actions/checkout@v2
       - name: Use Node.js 15.4
         uses: actions/setup-node@v1
         with:
@@ -21,39 +22,37 @@ jobs:
           yarn test
         env:
           CI: true
+      - name: Set up Docker Builder
+        uses: docker/setup-buildx-action@v1
+      - name: Log into GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.CR_PAT }}
       - name: Publish to Github Packages Registry
         uses: docker/build-push-action@v2
         with:
-          push: false
+          push: true
           context: './web'
-          tags: grenzbotin/vulpis.dev/vulpis-fe:latest
+          tags: ghcr.io/${{ github.repository }}/web:latest
           file: ./web/Dockerfile
-      - name: Deploy package to digitalocean
+      - name: Deploy package to cloud
         uses: appleboy/ssh-action@master
         env:
           GITHUB_USERNAME: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ github.token }}
-          BE_URL: ${{ secrets.WEB_BE_URL }}
-          CONTACT_ADDRESS_1: ${{ secrets.WEB_CONTACT_ADDRESS_1 }}
-          CONTACT_ADDRESS_2: ${{ secrets.WEB_CONTACT_ADDRESS_2 }}
-          CONTACT_MAIL: ${{ secrets.WEB_CONTACT_MAIL }}
-          CONTACT_PHONE: ${{ secrets.WEB_CONTACT_PHONE }}
-          USTID: ${{ secrets.WEB_USTID }}
+          CR_PAT: ${{ secrets.CR_PAT }}
+          REPO: ${{ github.repository }}
+          USERNAME_SSH: ${{ secrets.USERNAME_SSH }}
         with:
           host: ${{ secrets.HOST_SSH }}
           username: ${{ secrets.USERNAME_SSH }}
           password: ${{ secrets.PASSWORD_SSH }}
           port: ${{ secrets.PORT_SSH }}
-          envs: GITHUB_USERNAME, GITHUB_TOKEN, BE_URL, CONTACT_ADDRESS_1, CONTACT_ADDRESS_2, CONTACT_MAIL, CONTACT_PHONE, USTID
+          envs: GITHUB_USERNAME, GITHUB_TOKEN, CR_PAT, REPO, USERNAME_SSH
           script: |
-            docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-            docker pull docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-fe:latest
+            docker login ghcr.io -u $GITHUB_USERNAME -p $CR_PAT
+            docker pull ghcr.io/$REPO/web:latest
             docker stop web
-            docker run -dit -p 3000:3000 --name web \
-            -e REACT_APP_BACKEND_URL=$BE_URL \
-            -e REACT_APP_CONTACT_MAIL_ADDRESS=$CONTACT_MAIL \
-            -e REACT_APP_CONTACT_PHONE=$CONTACT_PHONE \
-            -e REACT_APP_CONTACT_ADDRESS_1=$CONTACT_ADDRESS_1 \
-            -e REACT_APP_CONTACT_ADDRESS_2=$CONTACT_ADDRESS_2 \
-            -e REACT_APP_USTID=$USTID \
-            docker.pkg.github.com/grenzbotin/vulpis.dev/vulpis-fe:latest
+            docker rm web
+            docker run -dit -p 3000:3000 --volume /home/$USERNAME_SSH/runtime-config.js:/srv/setup/runtime-config.js --restart always --name web ghcr.io/$REPO/web:latest

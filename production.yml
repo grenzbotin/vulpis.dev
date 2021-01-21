@@ -1,7 +1,7 @@
 version: '3'
 services:
   caddy:
-    image: abiosoft/caddy:1.0.4-no-stats
+    image: abiosoft/caddy:1.0.3-no-stats
     environment:
       ACME_AGREE: "true"
     volumes:
