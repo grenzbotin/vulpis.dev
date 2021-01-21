@@ -17,7 +17,7 @@ function Button({ children, mL, href, target, ...props }) {
 
   if (href) {
     return (
-      <Link href={href} target={target} rel="noreferrer" tabIndex={0} sx={{ height: 'min-content'}} as={RenderedButton} />
+      <Link href={href} target={target} rel="noreferrer" tabIndex={-1} sx={{ height: 'min-content'}}><RenderedButton /></Link>
     );
   }
 
