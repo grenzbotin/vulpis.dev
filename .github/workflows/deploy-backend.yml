@@ -52,7 +52,7 @@ jobs:
             docker pull ghcr.io/$REPO/backend:latest
             docker stop backend
             docker rm backend
-            docker run -dit -p 3030:3030 --name backend \
+            docker run -dit -p 3030:3030 --restart always --name backend \
             -e MAIL_HOST=$MAIL_HOST \
             -e MAIL_PORT=$MAIL_PORT \
             -e MAIL_USERNAME=MAIL_USERNAME \

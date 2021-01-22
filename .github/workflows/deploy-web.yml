@@ -50,6 +50,7 @@ jobs:
           CONTACT_MAIL: ${{ secrets.WEB_CONTACT_MAIL }}
           CONTACT_PHONE: ${{ secrets.WEB_CONTACT_PHONE }}
           ORG_USTID: ${{ secrets.WEB_USTID }}
+          USERNAME_SSH: ${{ secrets.USERNAME_SSH }}
         with:
           host: ${{ secrets.HOST_SSH }}
           username: ${{ secrets.USERNAME_SSH }}
@@ -61,4 +62,4 @@ jobs:
             docker pull ghcr.io/$REPO/web:latest
             docker stop web
             docker rm web
-            docker run -dit -p 3000:3000 --volume runtime-config.js:/srv/runtime-config.js --name web ghcr.io/$REPO/web:latest
+            docker run -dit -p 3000:3000 --volume /home/$USERNAME_SSH/runtime-config.js:/srv/setup/runtime-config.js --restart always --name web ghcr.io/$REPO/web:latest
