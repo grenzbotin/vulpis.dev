@@ -4,14 +4,22 @@ const path = require('path');
 const express = require('express');
 const transporter = require('./config');
 const dotenv = require('dotenv');
+const cors = require('cors');
+
 dotenv.config();
 const app = express();
+
+var corsOptions = {
+  origin: 'http://vulpis.dev',
+  allowedHeaders: 'accept, content-type',
+  methods: 'POST'
+};
 
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.json());
 app.use(express.static(buildPath));
 
-app.post('/send', (req, res) => {
+app.post('/send', cors(corsOptions), (req, res) => {
   if (req.body.company !== '' || req.body.human_check !== '32') {
     res.send({ success: true });
   } else {
