@@ -52,7 +52,10 @@ function Home({ headerElement, t }) {
       </Grid>
       <Box title={t('home.experience.title')} px={[4, 5, 6]} mb={5}>
         <H2>{t('home.experience.title')}</H2>
-        <Text>{t('home.experience.text_1')}.</Text>
+        <Text>
+          {t('home.experience.text_1')}<br />
+          {t('home.experience.text_2')}
+        </Text>
         <Grid gap={[4, 5, 6]} mt={3} columns={[1, 1, 1, 2]}>
           <Box title={t('home.experience.work.title')}>
             <H3>{t('home.experience.work.title')}</H3>

@@ -131,6 +131,7 @@ const vulpisTheme = {
       bg: 'primary',
       borderRadius: 'default',
       cursor: 'pointer',
+      fontFamily: 'body',
       '&:hover': {
         borderColor: 'secondary',
         boxShadow: t => `0 0 0 2px ${t.colors.secondary}`,
@@ -148,6 +149,7 @@ const vulpisTheme = {
       bg: 'transparent',
       boxShadow: 'inset 0 0 2px',
       cursor: 'pointer',
+      fontFamily: 'body',
       '&:hover': {
         borderColor: 'secondary',
         boxShadow: t => `0 0 0 2px ${t.colors.secondary}`,
@@ -167,6 +169,7 @@ const vulpisTheme = {
       borderWidth: '2px',
       borderStyle: 'solid',
       borderColor: 'background',
+      fontFamily: 'body',
       '&:hover': {
         outline: 'none',
         borderColor: 'secondary',

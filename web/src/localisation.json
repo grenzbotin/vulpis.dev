@@ -54,7 +54,8 @@
         },
         "experience": {
           "title": "Experience",
-          "text_1": "I am currently working as full-time frontend engineer at a Berlin based company builder. In the past years I build up a strong knowledge in working on applications in various fields",
+          "text_1": "I am currently working as full-time frontend engineer at a Berlin based company builder. In the past years I build up a strong knowledge in working on (mostly b2b) applications in various fields with cross-functional and world-wide acting teams.",
+          "text_2": "Next to that I participated in a mentorship program in which I conducted junior developers and career changers on their way to become a professional frontend engineer.",
           "work": {
             "title": "Professional projects",
             "list_1": "Idea management tool",
@@ -218,7 +219,8 @@
         },
         "experience": {
           "title": "Erfahrung",
-          "text_1": "Zur Zeit arbeite ich als Frontend-Entwickler in einem 'Company Builder' in Berlin. In den vergangenen Jahren konnte ich durch das Arbeiten an diversen Anwendungen in verschiedenen Feldern viele Erfahrungen sammeln",
+          "text_1": "Zur Zeit arbeite ich als Frontend-Entwickler in einem 'Company Builder' in Berlin. In den vergangenen Jahren durfte ich durch das Arbeiten an diversen B2B-Anwendungen in verschiedenen Geschäftsfeldern viele Erfahrungen in cross-funktionalen wie cross-kontinentalen Teams sammeln.",
+          "text_2": "Daneben nahm ich an einem Mentorship-Programm teil und begleitete Junior-Entwickler und Quereinsteiger auf ihrem beruflichen Werdegang zum professionellen Frontend-Entwickler.",
           "work": {
             "title": "Professionelle Projekte",
             "list_1": "Anwendung zur Ideenverwaltung",
@@ -249,7 +251,7 @@
           "opening": {
             "title": "Gründe, mich zu kontaktieren",
             "text_1": "Zur Zeit bin ich offen für Freelance-Arbeiten.",
-            "text_2": "Falls Sie für eine Non-Profit-Organisation arbeiten oder etwas im Kopf haben, um die Welt zu einem besseren Ort zu machen - zögern Sie nicht, mich zu kontaktieren und mir über Ihre Idee zu erzählen - ich freue mich darauf, Projekte mit einem sozialen, kulturellen oder ökologischen Hintergrund zu unterstützen. Auch, falls Sie meine Unterstützung nicht benötigen - lassen Sie mich Ihnen sagen: Bleiben Sie am Ball! Die Welt braucht Menschen wie Sie."
+            "text_2": "Falls Sie für eine Non-Profit-Organisation arbeiten oder etwas im Kopf haben, um die Welt zu einem besseren Ort zu machen - zögern Sie nicht, mich zu kontaktieren und mir von Ihrer Idee zu erzählen - ich freue mich darauf, Projekte mit einem sozialen, kulturellen oder ökologischen Hintergrund zu unterstützen. Auch, falls Sie meine Unterstützung nicht benötigen - lassen Sie mich Ihnen sagen: Bleiben Sie am Ball! Die Welt braucht Menschen wie Sie."
           },
           "validation": {
             "email_required": "E-Mail-Adresse ist nötig.",
