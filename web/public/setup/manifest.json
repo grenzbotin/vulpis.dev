@@ -47,7 +47,7 @@
     "gcm"
   ],
   "start_url": "/",
-  "scope": "",
+  "scope": "./",
   "orientation": "portrait",
   "display": "standalone",
   "theme_color": "#65a88b",
