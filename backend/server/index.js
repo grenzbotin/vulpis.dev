@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 var corsOptions = {
-  origin: 'https://vulpis.dev',
+  origin: ["https://vulpis.dev","https://www.vulpis.dev"],
   allowedHeaders: 'accept, content-type',
   methods: 'POST'
 };
