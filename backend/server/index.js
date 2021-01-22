@@ -41,6 +41,7 @@ app.post('/send', cors(corsOptions), (req, res) => {
   
       transporter.sendMail(mailOptions, function (err, info) {
         if (err) {
+          console.log(err);
           res.status(500).send({
             success: false,
           });
@@ -51,6 +52,7 @@ app.post('/send', cors(corsOptions), (req, res) => {
         }
       });
     } catch (error) {
+      console.log(error);
       res.status(500).send({
         success: false,
       });
