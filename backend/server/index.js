@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 var corsOptions = {
-  origin: 'http://vulpis.dev',
+  origin: 'https://vulpis.dev',
   allowedHeaders: 'accept, content-type',
   methods: 'POST'
 };
@@ -18,7 +18,7 @@ var corsOptions = {
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.json());
 app.use(express.static(buildPath));
-
+app.options('/send', cors(corsOptions));
 app.post('/send', cors(corsOptions), (req, res) => {
   if (req.body.company !== '' || req.body.human_check !== '32') {
     res.send({ success: true });
