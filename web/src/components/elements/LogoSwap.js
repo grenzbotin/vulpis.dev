@@ -32,6 +32,7 @@ function LogoSwap({ t }) {
         borderRadius: 100,
         backgroundColor: '#65a88b',
         cursor: 'pointer',
+        outline: 0,
         zIndex: 1,
       }}
       tabIndex={0}
