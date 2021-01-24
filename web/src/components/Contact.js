@@ -3,12 +3,28 @@ import React from 'react';
 import ContactForm from './ContactForm';
 
 function Contact() {
-  const stringValidation = (fieldName, fieldValue) => {
+  const stringValidationName = (fieldName, fieldValue) => {
     if (fieldValue.trim() === '') {
       return `${fieldName}_is_required`;
     }
 
-    if (/[^a-zA-Z -]/.test(fieldValue)) {
+    if (/[^a-zA-Z0-9 -]/.test(fieldValue)) {
+      return 'invalid_characters';
+    }
+
+    if (fieldValue.trim().length < 3) {
+      return `${fieldName}_3_characters`;
+    }
+
+    return null;
+  };
+
+  const textValidationName = (fieldName, fieldValue) => {
+    if (fieldValue.trim() === '') {
+      return `${fieldName}_is_required`;
+    }
+
+    if (/[^A-Za-z0-9\s!@#$€%^&*()_+=\-~\\[{}|"';:/.,?><]/.test(fieldValue)) {
       return 'invalid_characters';
     }
 
@@ -44,9 +60,9 @@ function Contact() {
   }
 
   const validate = {
-    name: value => stringValidation('name', value),
+    name: value => stringValidationName('name', value),
     email: emailValidation,
-    message: value => stringValidation('message', value),
+    message: value => textValidationName('message', value),
     company: () => null,
     human_check: numberValidation,
   };
