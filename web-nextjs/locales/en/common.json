@@ -1,0 +1,17 @@
+{
+	"navbar": {
+		"switch_language": "Switch language to German",
+		"switch_theme_dark": "Switch to day mode",
+		"switch_theme_light": "Switch to dark mode"
+	},
+	"heading": {
+		"logo": "Welcome to vulpis web development",
+		"type_writer_1": "Hello there.",
+		"type_writer_2": "This is a Fran, a software engineer.",
+		"type_writer_3": "May I help you?"
+	},
+	"footer": {
+		"legal_disclosure": "Legal notice",
+		"privacy": "Privacy"
+	}
+}

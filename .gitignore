@@ -14,10 +14,21 @@
 .env
 .eslintcache
 
+INSTALL.md
+
+/Dockerfile
+# cms
+/cms
+/db
+docker-compose.yml
+production.yml
+
 # Caddy folder
 /caddy
 
-/web/public/runtime-config.js
+/web-nextjs/public/setup/runtime-config.js
+/web-nextjs/pages/notes/
+/web-nextjs/pages/notes.tsx
 
 npm-debug.log*
 yarn-debug.log*

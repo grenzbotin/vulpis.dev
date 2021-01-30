@@ -1,0 +1,17 @@
+{
+	"navbar": {
+		"switch_language": "Sprache zu Englisch wechseln",
+		"switch_theme_dark": "Zum Tag-Modus wechseln",
+		"switch_theme_light": "Zum Nacht-Modus wechseln"
+	},
+	"heading": {
+		"logo": "Willkommen bei vulpis web development",
+		"type_writer_1": "Hallo.",
+		"type_writer_2": "Ich bin Franziska, Software-Entwicklerin aus Deutschland.",
+		"type_writer_3": "Kann ich Ihnen helfen?"
+	},
+	"footer": {
+		"legal_disclosure": "Impressum",
+		"privacy": "Datenschutz"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"meta": {
+		"title": "Notizen | vulpis web development",
+		"description": "Tiefergehende Informationen zu technischen Projekten und Tutorials",
+		"keywords": "vulpis web development, vulpis, Franziska Fieke, Notizen, Tutorials"
+	},
+	"accessibility": {
+		"box_title": "Die letzten Notizen" 
+	},
+	"title": "Notizen",
+	"subtitle": ".. zu technischen Details, Frameworks, Libraries und Tutorials."
+}

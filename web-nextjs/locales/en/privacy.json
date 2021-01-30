@@ -1,0 +1,55 @@
+{
+	"meta": {
+		"title": "Privacy policy | vulpis web development",
+		"description": "Data protection declaration for the usage of the website.",
+		"keywords": "vulpis web development, vulpis, Franziska Fieke, privacy policy"
+	},
+	"title": "Privacy policy",
+	"intro": "The following data protection declaration applies for the usage of the website and related services with the domain vulpis.dev.",
+	"accepting": "By using this website or sending an email to my mailbox you agree with the collection, usage and transmission of your data corresponding to this data protection declaration.",
+	"section_1": {
+		"title": "Accountable person",
+		"text": "Accountable for the collection, processing and usage of your personal data according to the art. 4 no. 7 GDPR is Franziska Fieke (see details Legal Notice)."
+	},
+	"section_2": {
+		"title": "Hosting",
+		"text_1": "This website is hosted on servers enabled by the service provider DigitalOcean, LLC. HQ in NY, USA.",
+		"text_2": "The used server is located in Frankfurt a. M. (Germany) and is maintained and secured to the best of my knowledge.",
+		"text_3": "For the purpose of data processing DigitalOcean closes a Data Processing Agreement (DPA) with its customers that follows the rules of the GDPR. I agree with",
+		"text_link": "Digital Oceans' data processing agreement",
+		"text_4": "."
+	},
+	"section_3": {
+		"title": "Access data",
+		"text_1": "With your request to vulpis.dev, your IP address got routed through an unknown number of network and servers located in (for me) unknown countries with their own data protection regulations and got probably stored or read out on its way. That happens before your request even reached our server and is part of your usage of the WWW.",
+		"text_2": "The server that is carrying this website is configured in a way that is does not store any logs with personal data (like e.g. Ip addresses, browser types, operating systems or similar information)."
+	},
+	"section_4": {
+		"title": "SSL protection",
+		"text": "Any data transferred between your browser and the web server are protected via SSL."
+	},
+	"section_5": {
+		"title": "Cookies and local storage",
+		"text": "There are no cookies created with this website. In order to display the website in different languages, the website sets a language param with the selected language in the local storage of your browser. This enables me to present you the website in your favorite language the next time you are visiting."
+	},
+	"section_6": {
+		"title": "Tracking and statistics",
+		"text": "This website does not use tracking software or tracking pixel and disclaim to use any form of fingerprinting for the purpose of data collection."
+	},
+	"section_7": {
+		"title": "Email communication",
+		"text_1": "In case you are contacting me via email, I will save all your sent data in my mailbox in order to be able to react appropriate to your request. Emails that were sent are permanently stored in my mailbox.",
+		"text_2": "Please note: While communciating via email I can not ensure a complete data protection.",
+		"text_3": "My mailbox is hosted with namecheap.com. For the purpose of data processing Namecheap closes a Data Processing Agreement (DPA) that follows the rules of the GDPR with its customers. I agree with",
+		"text_link": "Namecheaps' data processing agreement",
+		"text_4": "."
+	},
+	"section_8": {
+		"title": "Right to information and cancellation",
+		"text": "At any time any personal information that is stored in my mailbox can be obtained. Next to it you have the right to ask me to correct and/or delete that data. In case this is your wish, please write me a message."
+	},
+	"section_9": {
+		"title": "Changes to the privacy declaration",
+		"text": "In order to meet the legal requirements I may update the privacy policy from time to time. Any changes to the privacy policy will be published on this page and are effective once they are posted."
+	}
+}

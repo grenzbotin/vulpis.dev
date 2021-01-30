@@ -1,0 +1,12 @@
+{
+		"locales": ["en", "de"],
+		"defaultLocale": "en",
+		"pages": {
+			"*": ["common"],
+			"/": ["home"],
+			"/disclosure": ["disclosure"],
+			"/privacy": ["privacy"],
+			"/notes": ["notes"],
+			"/notes/[slug]": ["notes"]
+		}
+}

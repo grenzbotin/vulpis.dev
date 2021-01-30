@@ -1,0 +1,56 @@
+{
+	"meta": {
+		"title": "Datenschutzerklärung | vulpis web development",
+		"description": "Datenschutzerklärung für die Nutzung der Webseite.",
+		"keywords": "vulpis web development, vulpis, Franziska Fieke, Datenschutzerklärung"
+	},
+	"title": "Datenschutzerklärung",
+	"intro": "Die nachfolgende Datenschutzerklärung gilt für die Nutzung der Webseite unter vulpis.dev und zugehörige Dienste wie der E-Mail - Kommunikation.",
+	"accepting": "Durch die Verwendung dieser Webseite oder dem Senden von E-Mails an meine E-Mail-Adresse stimmen Sie der Erfassung, Nutzung und Übertragung Ihrer Daten gemäß dieser Datenschutzerklärung zu.",
+	"section_1": {
+		"title": "Verantwortliche Person",
+		"text": "Verantwortlich für die Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten im Sinne von Art. 4 Nr. 7 DSGVO ist Franziska Fieke (siehe Impressum). "
+	},
+	"section_2": {
+		"title": "Hosting",
+		"text_1": "Diese Seite ist wird auf Servern von DigitalOcean, LLC. mit Sitz in NY, USA (Serverbesitzer) betrieben.",
+		"text_2": "Der betriebene Server befindet sich in Frankfurt a. M. (Deutschland) und wird nach bestem Wissen betreut und gesichert.",
+		"text_3": "DigitalOcean sichert seinen Kunden zum Zweck der Auftragsverarbeitung eine Datenverarbeitungsvereinbarung (Data Processing Agreement) zu, die den Anforderungen der DSGVO entsprechen. Der",
+		"text_link": "Datenverarbeitungsvereinbarung von DigitalOcean",
+		"text_4": "stimme ich ausdrücklich zu.",
+		"text_5": "Der Server ist derart konfiguriert, dass keine IP-Addressen in den Logs erstellt werden."
+	},
+	"section_3": {
+		"title": "Zugriffsdaten",
+		"text_1": "Mit Ihrer Anfrage auf die Seite vulpis.dev wurde Ihre IP-Adresse bereits durch mehrere Netzwerkknoten und Server mir unbekannter Länder mit eigenen Datenschutzvorschriften geleitet und gegebenenfalls dort gespeichert oder anderweitig ausgelesen. Dies geschieht, noch bevor Ihre Anfrage den Server erreicht, und ist Teil Ihres Verkehrs am WorldWideWeb.",
+		"text_2": "Der Server, der diese Webseite trägt, ist derart konfiguriert, dass keine Besucherdaten gespeichert werden. Weder IP-Adressen, noch Browsertypen, Betriebssysteme oder ähnliche Informationen, die Ihr Browser bereitstellt."
+	},
+	"section_4": {
+		"title": "SSL-Verschlüsselung",
+		"text": "Die Datenübertragung zwischen dem Webserver und Ihrem Browser ist per SSL verschlüsselt."
+	},
+	"section_5": {
+		"title": "Cookies und lokaler Web-Speicher",
+		"text": "Es werden keine Cookies gespeichert. Um die Webseite in verschiedenen Sprachen anzeigen lassen zu können, wird in Ihrem Webspeicher ein Parameter mit der aktuell gewählten Sprache gesetzt. Dieser ermöglicht mir Ihnen die Webseite bei Ihrem nächsten Besuch in der richtigen Sprache anzuzeigen."
+	},
+	"section_6": {
+		"title": "Statistik und Tracking",
+		"text": "Diese Seite nutzt keine Tracking-Software oder Tracking-Pixel und verzichtet auf jede Art von Fingerprinting für statistische Erhebungen."
+	},
+	"section_7": {
+		"title": "E-Mail - Kommunikation",
+		"text_1": "Senden Sie mir eine E-Mail, speichere ich alle damit von von Ihnen übersendeten Daten, um angemessen auf Ihr Kontaktgesuch reagieren zu können. E-Mails bewahre ich dauerhaft in meinem E-Mail-Konto auf.",
+		"text_2": "Bitte beachten Sie: Bei der Kommunikation per E-Mail kann die vollständige Datensicherheit von mir nicht gewährleistet werden.",
+		"text_3": "Mein E-Mail-Konto ist bei namecheap.com gehostet. Namecheap sichert seinen Kunden zum Zweck der Auftragsverarbeitung eine Datenverarbeitungsvereinbarung (Data Processing Agreement) zu, die den Anforderungen der DSGVO entsprechen. Der",
+		"text_link": "Datenverarbeitungsvereinbarung von Namecheap",
+		"text_4": "stimme ich ausdrücklich zu."
+	},
+	"section_8": {
+		"title": "Recht auf Auskunft und Löschung",
+		"text": "Es steht Ihnen jederzeit frei, Auskunft über Ihre von mir in meinem E-Mail-Konto gespeicherten personenbezogenen Daten zu erhalten. Daneben steht Ihnen ein Recht zur Berichtigung und Löschung dieser Daten zu. Schreiben Sie mir dazu eine Nachricht."
+	},
+	"section_9": {
+		"title": "Änderungen der Datenschutzbestimmungen",
+		"text": "Ich behalte mir vor, die Datenschutzbestimmungen bei Notwendigkeit zu aktualisieren, damit sie den rechtlichen Anforderungen entspricht. Es gilt immer die Datenschutzerklärung, die bei Ihrem Besuch auf dieser Seite zu finden ist."
+	}
+}

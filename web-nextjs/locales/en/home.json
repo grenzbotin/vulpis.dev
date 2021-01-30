@@ -1,0 +1,93 @@
+{
+	"meta": {
+		"title": "vulpis web development | Franziska Fieke",
+		"description": "Experienced frontend developer (ReactJS) with focus on performance, accessibility and style.",
+		"keywords": "Web development, react app, frontend, freelancer, software engineer, frontend candidate screening, Franziska Fieke"
+	},
+	"coding": {
+		"title": "Development is passion and passion is what makes life a poetry",
+		"text_1": "I am Fran, a software engineer from Germany focussing on web and frontend development.",
+		"text_2": "I develop with and on the web for a living and - hell, I love what I do. Although I am always interested in learning new (web) technologies, my main focus lies on creating and enhancing applications with ReactJS.",
+		"text_3": "My main driver is not only to deliver readable and working code that create shiny websites and applications:",
+		"text_4": "as a frontend engineer I understand myself as an information enabler that, next to all visual and functional excellence, need to care as well about the so-called",
+		"text_5": "aesthetics of the invisible",
+		"text_6": "to provide an accessible and easy-to-use experience for all kinds of people.",
+		"text_7": "In my free time I build stuff with non-tech and tech hardware, enjoy what nature is teaching us and try to befriend a squirrel."
+	},
+	"stack": {
+		"title": "Tech Stack",
+		"text": "In the engineering world there is no one-stack-fits-all solution. A bridge in Rome has to withstand other loads than a bridge in Alaska - it is similar with software engineering. Every project has different needs based on which the engineer should decide wisely how he will meet them in order to deliver a high-quality, maintainable and sustainable code. Some hints on my (not-only) frontend stack experience:",
+		"list_1": "Languages: Javascript/TypeScript, (HTML, CSS)",
+		"list_2": "In-depth: React, NextJS, NodeJS",
+		"list_3": "Responsive and cross-platform functionality",
+		"list_4": "Various UI Frameworks like Material UI, Semantic UI, Theme-UI...",
+		"list_5": "Multi-theming enablement",
+		"list_6": "Internationalization and localization",
+		"list_7": "State management: Redux, Redux-Saga",
+		"list_8": "Data visualization with e.g. recharts, plotly",
+		"list_9": "Testing: Cypress, Jest",
+		"list_10": "Backend communication via REST API, websockets",
+		"list_11": "Other: Github, Docker, CI/CD, Django, Python"
+	},
+	"offer": {
+		"title": "Service & offer",
+		"subtitle_1": "Web audit",
+		"text_1": "I am happy to have a look at your current web site or application to see whether and which kind of improvements and fixes would make sense for you. Main part of this analysis will be the identification of issues in terms of functionality, performance, accessibility, SEO and best practices.",
+		"subtitle_2": "Responsive web and feature development",
+		"text_2": "Having your frontend based on a strong foundation of HTML, CSS and Javascript is key for an optimal user experience and, therefore, for achieving your business goals. If you have a design in mind or place, let's have a talk and find out whether I can help you in writing a cross-platform enabled frontend interface.",
+		"subtitle_3": "Looking for frontend engineers?",
+		"text_3": "If you are currently building up your team and looking for (ReactJS) frontend engineers, I can assist you with creating and review code challenges to find fitting candidates for your company."
+	},
+	"experience": {
+		"title": "Experience",
+		"text_1": "I am currently working as full-time frontend engineer at a Berlin based company builder. In the past years I build up a strong knowledge in working on (mostly b2b) applications in various fields with cross-functional and world-wide acting teams.",
+		"text_2": "Next to that I participated in a mentorship program in which I conducted junior developers and career changers on their way to become a professional frontend engineer.",
+		"work_title": "Work",
+		"work": {
+			"title": "Professional projects",
+			"list_1": "Idea management tool",
+			"list_2": "Cryptocurrency metrics analyzer",
+			"list_3": "Image annotation tool",
+			"list_4": "Machine changeover application",
+			"list_5": "Machine monitoring application"
+		},
+		"private": {
+			"title": "Hobby projects",
+			"list_1": "Platform for theatricals (soon online)",
+			"list_2": "Solar energy empowered light",
+			"list_3": "Integration of a sales platform for market data analytics"
+		},
+		"legend": {
+			"title": "Legend",
+			"EE": "Electrical engineeering"
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"name": "Your name",
+		"email": "Your email address",
+		"subject": "Email subject",
+		"message": "Your message",
+		"company": "Company name",
+		"human_check": "Eighty-four minus fifty-two?",
+		"submit": "Send message",
+		"opening": {
+			"title": "Reasons to contact me",
+			"text_1": "I am currently open for freelance work.",
+			"text_2": "In case you are working for a nonprofit organization or have something in mind to make this planet a better place to live on, please do not hesitate to tell me about your idea - I am always happy to support projects with a social, public or environmental impact. Even though you do not need my support, let me tell you: keep it rollin'! The world needs people like you."
+		},
+		"validation": {
+			"email_required": "An email address is required.",
+			"please_valid_email": "Please provide a valid email address.",
+			"invalid_characters": "The input contains invalid characters.",
+			"name_is_required": "Please provide a name.",
+			"message_is_required": "Please provide a message.",
+			"name_3_characters": "The name needs to contain at least 3 characters.",
+			"message_3_characters": "The message needs to contain at least 3 characters.",
+			"human_check_required": "Please solve the little task.",
+			"human_check_not_correct": "Well, that was not correct."
+		},
+		"submit_error": "Sending the contact request failed. Something is wrong on my end. Please try again later.",
+		"submit_success": "Successfully submitted! I will come back to you as soon as possible."
+	}
+}

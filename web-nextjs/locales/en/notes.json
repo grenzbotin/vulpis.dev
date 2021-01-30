@@ -1,0 +1,12 @@
+{
+	"meta": {
+		"title": "Notes | vulpis web development",
+		"description": "Deep dives into projects, challenges and tutorials",
+		"keywords": "vulpis web development, vulpis, Franziska Fieke, notes, tutorials"
+	},
+	"accessibility": {
+		"box_title": "Last notes" 
+	},
+	"title": "Notes",
+	"subtitle": ".. about technical details, frameworks, libraries and tutorials."
+}

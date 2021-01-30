@@ -1,0 +1,92 @@
+{
+	"meta": {
+		"title": "vulpis web development | Franziska Fieke",
+		"description": "Erfahrene Frontend-Entwicklerin mit Fokus auf Performance, Barrierefreiheit und Design",
+		"keywords": "Web Entwicklung, React web, Frontend, Auftragsarbeit, Frontend-Entwickler finden, Franziska Fieke"
+	},
+	"coding": {
+		"title": "Entwicklung ist Leidenschaft und Leidenschaft ist des Lebens Poesie",
+		"text_1": "Ich bin Franziska, eine Software-Ingenieurin aus Deutschland, die sich auf Web- und Frontend-Entwicklung spezialisiert hat.",
+		"text_2": "Ich verdiene mir meinen Lebensunterhalt mit der Entwicklung für und im Web und verdammt - ich liebe, was ich tue. Obwohl ich vielseitig interessiert bin und mich beständig forbilde, liegt mein Hauptaugemerk auf der Erstellung und Verbesserung von Applikationen und Webseiten mit ReactJS.",
+		"text_3": "Dabei steht mir nicht nur das Schreiben von sauberem und funktionalem Programmiercode im Vordergrund, welcher eine hübsche Nutzerumgebung erschafft:",
+		"text_4": "als Frontend-Entwicklerin verstehe ich mich selbst in der Verantwortung, neben aller funktionaler und visueller Exzellenz immer auch ein Auge auf die sogenannte",
+		"text_5": "Ästhetik des Unsichtbaren",
+		"text_6": "zu haben, um der Vielfältigkeit der Menschen gerecht zu werden und ihnen eine möglichst barrierefreie und nutzerfreundliche Informationsbeschaffung zu ermöglichen.",
+		"text_7": "In meiner Freizeit baue ich technische und nicht-technische Dinge, erkunde die Genialität der Natur und versuche mich mit einem Eichhörnchen zu befreunden."
+	},
+	"stack": {
+		"title": "Tech Stack",
+		"text": "In der Welt des Ingenieurwesens gibt es nicht den einen richtigen Weg. Die Konstruktion einer Brücke in Alaska muss etwa anderen Belastungen trotzen als eine Brücke in Rom - ähnlich verhält es sich auch in der Software-Entwicklung. Jedes Projekt hat andere Voraussetzungen und Anforderungen, auf die sich der Entwickler einstellen muss, um optimale Lösungsansätze zu finden und qualitative, wartungsfreundliche und nachhaltige Anwendungen zu schreiben. Anbei finden sich ein paar Stichpunkte zu meinen Fähigkeiten:",
+		"list_1": "Sprachen: Javascript/TypeScript (HTML, CSS)",
+		"list_2": "Im Detail: React, NextJS, NodeJS",
+		"list_3": "Responsive und plattformübergreifende Funktionalität",
+		"list_4": "Verschiedene UI Frameworks wie Material UI, Semantic UI, Theme-UI...",
+		"list_5": "Aufsetzen von multiplen Design-Themes",
+		"list_6": "Internationalisierung und Lokalisierung",
+		"list_7": "State management: Redux, Redux-Saga",
+		"list_8": "Daten-Visualisierung mit z.B. recharts, plotly",
+		"list_9": "Tests: Cypress, Jest",
+		"list_10": "Backend Kommunikation via REST API, websockets",
+		"list_11": "Anderes: Github, Docker, CI/CD, Django, Python"
+	},
+	"offer": {
+		"title": "Service",
+		"subtitle_1": "Webseiten-Analyse",
+		"text_1": "Gerne unterziehe ich Ihrer aktuellen Webseite oder Anwendung einer Prüfung um herauszufinden, ob und welche Verbesserungen und Fehlerbehebungen für Sie Sinn machen könnten. Das Hauptaugenmerk dabei ist die Identifikation von Schwachstellen in Bezug auf Funktionalität, Performance, Barrierefreiheit, SEO und Best Practices.",
+		"subtitle_2": "Responsive Web- und Feature-Entwicklung",
+		"text_2": "Eine stabile Basis aus HTML, CSS und Javascript ist einer der Hauptschlüssel für eine optimale Nutzerfreundlichkeit und damit für die Erreichung Ihrer Unternehmensziele. Wenn Sie bereits ein Design vorliegen oder zumindest im Kopf haben - lassen Sie uns reden und herausfinden, inwieweit ich Ihnen helfen kann, ein plattformübergreifendes Frontend-Interface zu entwickeln.",
+		"subtitle_3": "Suchen Sie Frontend-Entwickler?",
+		"text_3": "Wenn Sie gerade Ihr Team aufbauen und auf der Suche nach (ReactJS) Frontend-Entwicklern sind, kann ich Ihnen dabei helfen, Code challenges zu entwickeln und die Lösungen der Kandidaten zu prüfen, um passende Mitarbeiter für Ihr Unternehmen zu finden."
+	},
+	"experience": {
+		"title": "Erfahrung",
+		"text_1": "Zur Zeit arbeite ich als Frontend-Entwickler in einem 'Company Builder' in Berlin. In den vergangenen Jahren durfte ich durch das Arbeiten an diversen B2B-Anwendungen in verschiedenen Geschäftsfeldern viele Erfahrungen in cross-funktionalen wie cross-kontinentalen Teams sammeln.",
+		"text_2": "Daneben nahm ich an einem Mentorship-Programm teil und begleitete Junior-Entwickler und Quereinsteiger auf ihrem beruflichen Werdegang zum professionellen Frontend-Entwickler.",
+		"work_title": "Projekte",
+		"work": {
+			"title": "Professionelle Projekte",
+			"list_1": "Anwendung zur Ideenverwaltung",
+			"list_2": "Analyseplattform für Krypto-Währungen",
+			"list_3": "Anwendung zur Bild-Annotation",
+			"list_4": "Anwendung zum Rüsten von Maschinen",
+			"list_5": "Anwendung zur zeitsensitiven Maschinen-Überwachung"
+		},
+		"private": {
+			"title": "Hobby-Projekte",
+			"list_1": "Plattform zum Finden von Theateraufführungen (bald online)",
+			"list_2": "Solarenergiebetriebenes Licht",
+			"list_3": "Anbindung einer Vertriebsplattform zur Marktdatenanalyse"
+		},
+		"legend": {
+			"title": "Legende",
+			"EE": "Elektrotechnik"
+		}
+	},
+	"contact": {
+		"title": "Kontakt",
+		"name": "Ihr Name",
+		"email": "Ihre E-Mail-Adresse",
+		"message": "Ihre Nachricht",
+		"company": "Unternehmensname",
+		"human_check": "Fünfundsiebzig minus dreiundvierzig?",
+		"submit": "Nachricht senden",
+		"opening": {
+			"title": "Gründe, mich zu kontaktieren",
+			"text_1": "Zur Zeit bin ich offen für Freelance-Arbeiten.",
+			"text_2": "Falls Sie für eine Non-Profit-Organisation arbeiten oder etwas im Kopf haben, um die Welt zu einem besseren Ort zu machen - zögern Sie nicht, mich zu kontaktieren und mir von Ihrer Idee zu erzählen - ich freue mich darauf, Projekte mit einem sozialen, kulturellen oder ökologischen Hintergrund zu unterstützen. Auch, falls Sie meine Unterstützung nicht benötigen - lassen Sie mich Ihnen sagen: Bleiben Sie am Ball! Die Welt braucht Menschen wie Sie."
+		},
+		"validation": {
+			"email_required": "E-Mail-Adresse ist nötig.",
+			"please_valid_email": "Bitte geben Sie eine valide E-Mail-Adresse ein.",
+			"invalid_characters": "Ihre Eingabe enthält invalide Zeichen.",
+			"name_is_required": "Bitte geben Sie Ihren Namen ein.",
+			"message_is_required": "Bitte geben Sie eine Nachricht ein.",
+			"name_3_characters": "Der Name muss mindestens 3 Zeichen enthalten.",
+			"message_3_characters": "Die Nachricht muss mindestens 3 Zeichen enthalten.",
+			"human_check_required": "Bitte diese kleine Aufgabe lösen.",
+			"human_check_not_correct": "Das war aber nicht die richtige Antwort."
+		},
+		"submit_error": "Das Senden der Anfrage schlug fehl. Irgendetwas ist falsch auf meiner Seite. Versuchen Sie es später erneut.",
+		"submit_success": "Das Senden der Anfrage war erfolgreich. Ich komme bald auf Sie zurück."
+	}
+}
