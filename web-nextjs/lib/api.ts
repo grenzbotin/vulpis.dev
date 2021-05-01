@@ -1,7 +1,5 @@
-import configuration from '../configuration';
-
 export const getCMSURL = (): string => {
-  return configuration.CMS_URL || 'http://localhost:1337';
+  return process.env.NEXT_PUBLIC_CMS_URL || 'http://localhost:1337';
 };
 
 export const getStrapiURL = (path: string): string => {

@@ -1,12 +1,14 @@
 FROM node:15.4-alpine as builder
 
+ARG NEXT_PUBLIC_CMS_URL
+
 WORKDIR /usr/src/app
 COPY package*.json ./
 COPY yarn.lock ./
 
 RUN yarn cache clean && yarn --update-checksums
 COPY . ./
-RUN yarn && yarn build
+RUN yarn && NEXT_PUBLIC_CMS_URL=$NEXT_PUBLIC_CMS_URL yarn build
 
 # Production
 #FROM abiosoft/caddy:1.0.3-no-stats

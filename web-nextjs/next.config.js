@@ -7,7 +7,7 @@ const compose = (...fns) => (...args) => fns.reduceRight((y, f) => f(y), ...args
 const nextConfig = {
   include: path.resolve(__dirname, 'assets/svg'),
   images: {
-    domains: ['localhost', 'vulpis.dev'],
+    domains: ['localhost', process.env.NEXT_PUBLIC_CMS_URL],
   },
 }
 

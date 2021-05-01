@@ -106,7 +106,6 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(1);
-  console.log(project);
 
   return (
     <>
