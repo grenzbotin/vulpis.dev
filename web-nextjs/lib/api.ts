@@ -1,9 +1,7 @@
-export const getCMSURL = (): string => {
-  return process.env.NEXT_PUBLIC_CMS_URL || 'http://localhost:1337';
-};
+import { secrets } from './utils';
 
 export const getStrapiURL = (path: string): string => {
-  return `${getCMSURL()}${path}`;
+  return `${secrets.CMS_URL}${path}`;
 };
 
 export interface Skill {

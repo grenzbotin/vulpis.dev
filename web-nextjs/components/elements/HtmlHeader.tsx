@@ -77,8 +77,6 @@ const HtmlHeader: React.FC<Props> = ({ title, description, keywords, noRobots = 
       <link href="/setup/72x72.png" rel="apple-touch-icon" sizes="72x72" />
 
       <link href="/setup/manifest.json" rel="manifest" />
-
-      <script src="/setup/runtime-config.js"></script>
     </Head>
   );
 };

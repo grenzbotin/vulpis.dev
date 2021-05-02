@@ -1,10 +1,10 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import axios, { AxiosPromise, AxiosResponse } from "axios";
-import { Box, Input, Label, Textarea, Button, Text } from "theme-ui";
-import useTranslation from "next-translate/useTranslation";
+import React, { ChangeEvent, FormEvent, useState } from 'react';
+import axios, { AxiosPromise, AxiosResponse } from 'axios';
+import { Box, Input, Label, Textarea, Button, Text } from 'theme-ui';
+import useTranslation from 'next-translate/useTranslation';
 
-import LoadingIcon from "./elements/LoadingIcon";
-import configuration from "../configuration";
+import LoadingIcon from './elements/LoadingIcon';
+import { secrets } from '../lib/utils';
 
 interface Result {
   success: boolean;
@@ -216,7 +216,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ initialValues, validate }) =>
       setLoading(true);
 
       axios
-        .post<AxiosPromise>(`${configuration.BACKEND_URL}/send`, { ...values })
+        .post<AxiosPromise>(`${secrets.BACKEND_URL}/send`, { ...values })
         .then((response: AxiosResponse) => {
           setLoading(false);
           setResult(response.data);

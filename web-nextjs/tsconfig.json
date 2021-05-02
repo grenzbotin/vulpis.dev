@@ -34,7 +34,6 @@
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"next.config.js",
-		"configuration.js"
+		"next.config.js"
 	]
 }

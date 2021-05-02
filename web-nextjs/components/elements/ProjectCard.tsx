@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Box, Paragraph, Text, Link } from '@theme-ui/components';
 import Image from 'next/image';
-import { getCMSURL, Project } from '@/../lib/api';
+import { Project } from '@/../lib/api';
 import { H4 } from './Typography';
 import { LogoNaked } from './Logo';
 import Modal from './Modal';
 import Button from './Button';
+import { secrets } from '@/../lib/utils';
 
 interface ImageProps {
   height: number;
@@ -144,7 +145,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               width={project.images[selectedImage].height}
             >
               <Image
-                src={`${getCMSURL()}${project.images[selectedImage].url}`}
+                src={`${secrets.CMS_URL}${project.images[selectedImage].url}`}
                 className="image"
                 layout="fill"
               />
@@ -155,7 +156,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <StyledBox title={project.title}>
         <ImageContainer onClick={() => setOpen(true)}>
           <Image
-            src={`${getCMSURL()}${project.images[0].url}`}
+            src={`${secrets.CMS_URL}${project.images[0].url}`}
             className="image"
             layout="fill"
             sizes="(max-width: 814px) 668px,
@@ -220,7 +221,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               <Image
                 title={item.skill.name}
                 alt={item.skill.name}
-                src={`${getCMSURL()}${item.skill.logo.url}`}
+                src={`${secrets.CMS_URL}${item.skill.logo.url}`}
                 width={20}
                 height={20}
                 layout="fixed"

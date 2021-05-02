@@ -37,7 +37,14 @@ jobs:
           context: "./web-nextjs"
           tags: ghcr.io/${{ github.repository }}/web-nextjs:latest
           file: ./web-nextjs/Dockerfile
-          build-args: NEXT_PUBLIC_CMS_URL=${{ secrets.WEB_CMS_URL }}
+          build-args: |
+            NEXT_PUBLIC_CMS_URL=${{ secrets.WEB_CMS_URL }}
+            NEXT_PUBLIC_BACKEND_URL=${{ secrets.WEB_BE_URL }}
+            NEXT_PUBLIC_MAIL_ADDRESS=${{ secrets.WEB_CONTACT_MAIL }}
+            NEXT_PUBLIC_CONTACT_ADDRESS_1=${{ secrets.WEB_CONTACT_ADDRESS_1 }}
+            NEXT_PUBLIC_CONTACT_ADDRESS_2=${{ secrets.WEB_CONTACT_ADDRESS_2 }}
+            NEXT_PUBLIC_CONTACT_PHONE=${{ secrets.WEB_CONTACT_PHONE }}
+            NEXT_PUBLIC_USTID=${{ secrets.WEB_USTID }}
       - name: Deploy package to cloud
         uses: appleboy/ssh-action@master
         env:
@@ -56,4 +63,4 @@ jobs:
             docker pull ghcr.io/$REPO/web-nextjs:latest
             docker stop web-nextjs
             docker rm web-nextjs
-            docker run -dit -p 4000:3000 --volume /home/$USERNAME_SSH/runtime-config.js:/srv/setup/runtime-config.js --restart always --name web-nextjs ghcr.io/$REPO/web-nextjs:latest
+            docker run -dit -p 4000:3000 --restart always --name web-nextjs ghcr.io/$REPO/web-nextjs:latest
