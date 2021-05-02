@@ -69,7 +69,7 @@ const StyledBox = styled(Box)`
 
   &:hover {
     box-shadow: inset 0px 0px 0px 2px var(--theme-ui-colors-secondary);
-    background: var(--theme-ui-colors-secondary);
+    background: var(--theme-ui-colors-projectCardBGHover);
     transition: all 0.2s linear;
     transition-property: background, box-shadow;
   }
@@ -225,6 +225,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     sx={{
                       textDecoration: 'none',
                       padding: '.4rem',
+                      '> svg': { fill: 'primary' },
                       ':hover, :focus': {
                         backgroundColor: 'primary',
                         color: 'secondary',
@@ -253,6 +254,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     sx={{
                       padding: '.4rem',
                       textDecoration: 'none',
+                      '> svg': { fill: 'primary' },
                       ':hover, :focus': {
                         backgroundColor: 'primary',
                         color: 'secondary',

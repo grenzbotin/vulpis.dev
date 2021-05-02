@@ -8,6 +8,7 @@ const light = {
   secondary: '#65a88b',
   text: '#000',
   articleBoxBackground: 'rgba(0,0,0,0.05)',
+  projectCardBGHover: 'rgb(101, 168, 139, .7)',
   projectCardBackground: 'rgba(0,0,0,0.04)',
   projectCardsColor: '#e3e3e3'
 };
@@ -20,6 +21,7 @@ const dark = {
   navbarText: '#e3e3e3',
   text: '#e3e3e3',
   projectCardBackground: 'rgba(0,0,0,0.2)',
+  projectCardBGHover: 'rgb(101, 168, 139, .7)',
   projectCardsColor: '#e3e3e3',
   articleBoxBackground: '#e3e3e31A'
 };
