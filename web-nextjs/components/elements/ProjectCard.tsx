@@ -8,6 +8,7 @@ import { LogoNaked } from './Logo';
 import Modal from './Modal';
 import Button from './Button';
 import { secrets } from '@/../lib/utils';
+import LoadingIcon from './LoadingIcon';
 
 interface ImageProps {
   height: number;
@@ -26,6 +27,11 @@ const ImageContainer = styled(Box)`
     width: 100% !important;
     position: relative !important;
     height: unset !important;
+
+    &.loading {
+      max-height: 0px !important;
+      visibility: hidden !important;
+    }
   }
 `;
 
@@ -43,6 +49,9 @@ const ImageModalContainer = styled(Box)<ImageProps>`
     width: ${(props) => props.width}px !important;
     max-height: calc(90vh - 32px - 40px - 32px - 16px) !important;
     max-width: 100% !important;
+    &.loading {
+      visibility: hidden !important;
+    }
   }
 `;
 
@@ -104,9 +113,34 @@ interface ProjectCardProps {
   project: Project;
 }
 
+const ImagePlaceholder: React.FC = () => {
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '200px',
+        height: '100%',
+        border: '1px dotted var(--theme-ui-colors-secondary)',
+        background: 'var(--theme-ui-colors-projectCardBackground)'
+      }}
+    >
+      <LoadingIcon borderWidth={0} width={30} height={30} />
+    </Box>
+  );
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(1);
+  const [mainImageLoading, setMainImageLoading] = useState(true);
+  const [imageLoading, setImageLoading] = useState(true);
+
+  const handleClickArrow = (newImage: number): void => {
+    setImageLoading(true);
+    setSelectedImage(newImage);
+  };
 
   return (
     <>
@@ -119,8 +153,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 sx={{ marginRight: '1rem' }}
                 onClick={() =>
                   selectedImage === 0
-                    ? setSelectedImage(project.images.length - 1)
-                    : setSelectedImage(selectedImage - 1)
+                    ? handleClickArrow(project.images.length - 1)
+                    : handleClickArrow(selectedImage - 1)
                 }
               >
                 &#9668;
@@ -130,8 +164,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 sx={{ marginLeft: '1rem' }}
                 onClick={() =>
                   selectedImage === project.images.length - 1
-                    ? setSelectedImage(0)
-                    : setSelectedImage(selectedImage + 1)
+                    ? handleClickArrow(0)
+                    : handleClickArrow(selectedImage + 1)
                 }
               >
                 &#9658;
@@ -144,10 +178,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               height={project.images[selectedImage].height}
               width={project.images[selectedImage].height}
             >
+              {imageLoading && <ImagePlaceholder />}
               <Image
                 src={`${secrets.CMS_URL}${project.images[selectedImage].url}`}
-                className="image"
+                className={`image ${imageLoading && 'loading'}`}
                 layout="fill"
+                onLoad={() => setImageLoading(false)}
               />
             </ImageModalContainer>
           </>
@@ -155,19 +191,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       )}
       <StyledBox title={project.title}>
         <ImageContainer onClick={() => setOpen(true)}>
+          {mainImageLoading && <ImagePlaceholder />}
           <Image
             src={`${secrets.CMS_URL}${project.images[0].url}`}
-            className="image"
+            className={`image ${mainImageLoading && 'loading'}`}
             layout="fill"
             sizes="(max-width: 814px) 668px,
             (max-width: 1449px) 400px,
             515px"
+            onLoad={() => setMainImageLoading(false)}
           />
         </ImageContainer>
         <div className="info">
           <div className="typeCircle">
             {project.isHobby ? (
-              <LogoNaked name="Vulpis web development" height="50px" width="67.267px" />
+              <LogoNaked name="Side project" height="50px" width="67.267px" />
             ) : (
               'ext.'
             )}
