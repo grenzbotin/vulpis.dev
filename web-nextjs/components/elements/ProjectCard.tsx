@@ -9,6 +9,7 @@ import Modal from './Modal';
 import Button from './Button';
 import { secrets } from '@/../lib/utils';
 import LoadingIcon from './LoadingIcon';
+import CustomIcon from './CustomIcon';
 
 interface ImageProps {
   height: number;
@@ -216,7 +217,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <div style={{ margin: '.5rem 0' }}>
               {project.url && (
                 <Paragraph sx={{ fontSize: 1 }}>
-                  <Text sx={{ fontSize: '10px' }}>&#x25BA;</Text>{' '}
                   <Link
                     href={project.url}
                     target="_blank"
@@ -224,28 +224,49 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     rel="noreferrer"
                     sx={{
                       textDecoration: 'none',
-                      padding: '.2rem',
-                      ':hover': { backgroundColor: 'primary', color: 'secondary' }
+                      padding: '.4rem',
+                      ':hover, :focus': {
+                        backgroundColor: 'primary',
+                        color: 'secondary',
+                        '> svg': { fill: 'secondary' }
+                      }
                     }}
                   >
+                    <CustomIcon
+                      name="internet"
+                      alt="Code repository"
+                      height={15}
+                      width={15}
+                      style={{ marginRight: '.3rem' }}
+                    />{' '}
                     Online Demo
                   </Link>
                 </Paragraph>
               )}
               {project.github && (
                 <Paragraph sx={{ fontSize: 1 }}>
-                  <Text sx={{ fontSize: '10px' }}>&#x25BA;</Text>{' '}
                   <Link
                     href={project.github}
                     target="_blank"
                     title={`Github code repository: ${project.url}`}
                     rel="noreferrer"
                     sx={{
-                      padding: '.2rem',
+                      padding: '.4rem',
                       textDecoration: 'none',
-                      ':hover': { backgroundColor: 'primary', color: 'secondary' }
+                      ':hover, :focus': {
+                        backgroundColor: 'primary',
+                        color: 'secondary',
+                        '> svg': { fill: 'secondary' }
+                      }
                     }}
                   >
+                    <CustomIcon
+                      name="code"
+                      alt="Code repository"
+                      height={15}
+                      width={15}
+                      style={{ marginRight: '.3rem' }}
+                    />{' '}
                     Github repository
                   </Link>
                 </Paragraph>

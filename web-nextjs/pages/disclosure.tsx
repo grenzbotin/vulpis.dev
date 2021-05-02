@@ -1,14 +1,14 @@
 /* eslint-disable max-len */
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import { Box, Container, Text, Link } from 'theme-ui';
+import { Box, Container, Text, Link, Paragraph } from 'theme-ui';
 import dynamic from 'next/dynamic';
 import Obfuscate from 'react-obfuscate';
 import { GetStaticProps } from 'next';
-import Image from 'next/image';
 
 import { H1, H3 } from '../components/elements/Typography';
 import { secrets } from '../lib/utils';
+import CustomIcon from '../components/elements/CustomIcon';
 
 const HtmlHeader = dynamic(() => import('../components/elements/HtmlHeader'));
 
@@ -94,10 +94,11 @@ const Disclosure: React.FC = () => {
               Verbraucherschlichtungsstelle teilzunehmen.
             </Text>
             <H3>Credits</H3>
-            <Text>
-              <Image alt="sun icon" src="/images/sun.svg" width={16} height={16} />
+            <Paragraph>
+              <CustomIcon alt="sun icon" name="sun" width={16} height={16} />
               &nbsp;+&nbsp;
-              <Image alt="moon icon" src="/images/moon.svg" width={16} height={16} /> &nbsp;
+              <CustomIcon alt="moon icon" name="moon" width={16} height={16} /> &nbsp;+&nbsp;
+              <CustomIcon alt="internet icon" name="internet" width={16} height={16} /> &nbsp;
               {t('credits_made_by')}:&nbsp;
               <Link
                 href="https://www.flaticon.com/authors/freepik"
@@ -107,7 +108,19 @@ const Disclosure: React.FC = () => {
               >
                 Freepik
               </Link>
-            </Text>
+            </Paragraph>
+            <Paragraph>
+              <CustomIcon alt="code icon" name="code" width={16} height={16} /> &nbsp;
+              {t('credit_made_by')}:&nbsp;
+              <Link
+                href="https://www.flaticon.com/authors/pixel-perfect"
+                target="_blank"
+                title="Icon credits: flaticon - Pixel perfect"
+                rel="noreferrer"
+              >
+                Pixel perfect
+              </Link>
+            </Paragraph>
           </Box>
         </main>
       </Container>

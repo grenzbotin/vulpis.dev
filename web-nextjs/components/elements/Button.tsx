@@ -9,6 +9,7 @@ interface ButtonProps {
   children: React.ReactNode | string;
   disabled?: boolean;
   onClick?: (event: React.MouseEvent) => void;
+  title?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({

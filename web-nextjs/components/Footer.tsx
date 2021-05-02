@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, Box, Flex } from 'theme-ui';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import Button from './elements/Button';
 import PageLabel from './elements/PageLabel';
 import useTranslation from 'next-translate/useTranslation';
+import CustomIcon from './elements/CustomIcon';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation('common');
@@ -55,35 +55,33 @@ const Footer: React.FC = () => {
           <Button
             href="https://www.xing.com/profile/Franziska_Fieke"
             aria-label="Link: Xing Franziska Fieke"
+            title="Xing Franziska Fieke"
             target="_blank"
             rel="noreferrer"
           >
-            <Image alt="Xing Franziska Fieke" src="/images/xing.svg" width={16} height={16} />
+            <CustomIcon alt="Xing: Franziska Fieke" name="xing" width={16} height={16} />
           </Button>
           <Button
             href="https://de.linkedin.com/in/franziska-fieke-809882114"
             aria-label="Link: Linkedin Franziska Fieke"
+            title="Linkedin Franziska Fieke"
             target="_blank"
             rel="noreferrer"
             mL
           >
-            <Image
-              alt="LinkedIn Franziska Fieke"
-              src="/images/linkedin.svg"
-              width={16}
-              height={16}
-            />
+            <CustomIcon alt="LinkedIn: Franziska Fieke" name="linkedin" width={16} height={16} />
           </Button>
           <Button
             href="https://stackoverflow.com/users/3228483/grenzbotin"
             aria-label="Link: stack overflow"
+            title="stack overflow"
             target="_blank"
             rel="noreferrer"
             mL
           >
-            <Image
-              alt="stack overflow Franziska Fieke"
-              src="/images/stackoverflow.svg"
+            <CustomIcon
+              alt="stack overflow: Franziska Fieke"
+              name="stackoverflow"
               width={16}
               height={16}
             />

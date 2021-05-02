@@ -40,7 +40,7 @@ const Home: React.FC<HomeProps> = ({ headerElement, projects }) => {
               <p>{t('coding.text_1')}</p>
               <CustomImage
                 alt="Franziska Fieke"
-                src="/images/profile.webp"
+                src="profile.webp"
                 rounded
                 height={200}
                 width={200}

@@ -1,10 +1,10 @@
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { Link as NextLink } from './NextLink';
 import Button from './Button';
+import CustomIcon from './CustomIcon';
 
 const LanguageToggle: React.FC = () => {
   const { pathname, query } = useRouter();
@@ -21,13 +21,8 @@ const LanguageToggle: React.FC = () => {
       locale={switchTo}
       key={switchTo}
     >
-      <Button aria-label={t('navbar.switch_language')}>
-        <Image
-          alt={t('navbar.switch_language')}
-          src={isGerman ? '/images/de.svg' : '/images/en.svg'}
-          width={16}
-          height={8}
-        />
+      <Button title={t('navbar.switch_language')} aria-label={t('navbar.switch_language')}>
+        <CustomIcon alt={t('navbar.switch_language')} name={lang} width={16} height={8} />
       </Button>
     </NextLink>
   );
