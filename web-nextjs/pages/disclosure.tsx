@@ -48,8 +48,8 @@ const Disclosure: React.FC = () => {
             <Text>
               vulpis web development Franziska Fieke
               <br />
-              {secrets.CONTACT_ADDRESS_1} <br />
-              {secrets.CONTACT_ADDRESS_2}
+              {secrets.CONTACT_ADDRESS_1.replace('_', ' ')} <br />
+              {secrets.CONTACT_ADDRESS_2.replace('_', ' ')}
             </Text>
             <H3>Kontakt</H3>
             <Text
