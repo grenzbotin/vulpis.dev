@@ -228,8 +228,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                       '> svg': { fill: 'primary' },
                       ':hover, :focus': {
                         backgroundColor: 'primary',
-                        color: 'secondary',
-                        '> svg': { fill: 'secondary' }
+                        color: 'background',
+                        '> svg': { fill: 'background' }
                       }
                     }}
                   >
@@ -257,8 +257,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                       '> svg': { fill: 'primary' },
                       ':hover, :focus': {
                         backgroundColor: 'primary',
-                        color: 'secondary',
-                        '> svg': { fill: 'secondary' }
+                        color: 'background',
+                        '> svg': { fill: 'background' }
                       }
                     }}
                   >
