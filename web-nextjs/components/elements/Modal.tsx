@@ -14,8 +14,8 @@ const StyledBox = styled(Box)`
 
   .modal {
     width: 80vw;
-    height: 90vh;
-    max-height: 90vh;
+    height: 80vh;
+    max-height: 80vh;
     background-color: var(--theme-ui-colors-background);
     margin: auto;
     margin-top: 5vh;

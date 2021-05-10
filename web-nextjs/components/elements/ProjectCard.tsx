@@ -37,7 +37,7 @@ const ImageContainer = styled(Box)`
 `;
 
 const ImageModalContainer = styled(Box)<ImageProps>`
-  height: calc(90vh - 32px - 40px - 32px - 16px);
+  height: calc(80vh - 32px - 40px - 32px - 16px);
   > div {
     position: unset !important;
   }
@@ -48,7 +48,7 @@ const ImageModalContainer = styled(Box)<ImageProps>`
     position: relative !important;
     height: ${(props) => props.height}px !important;
     width: ${(props) => props.width}px !important;
-    max-height: calc(90vh - 32px - 40px - 32px - 16px) !important;
+    max-height: calc(80vh - 32px - 40px - 32px - 16px) !important;
     max-width: 100% !important;
     &.loading {
       visibility: hidden !important;
