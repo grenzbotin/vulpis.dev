@@ -104,7 +104,7 @@ const StyledBox = styled(Box)`
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--theme-ui-colors-projectCardBackground);
+      background: var(--theme-ui-colors-projectCardSkillBackground);
       margin-right: 0.4rem;
     }
   }

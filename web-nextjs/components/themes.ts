@@ -1,29 +1,31 @@
 import { Theme } from 'theme-ui';
 
 const light = {
-  background: '#e3e3e3',
-  navbarBG: '#282c34',
-  navbarText: '#e3e3e3',
-  primary: '#282c34',
-  secondary: '#65a88b',
-  text: '#000',
+  background: 'rgb(227,227,227)',
+  navbarBG: 'rgb(40,44,52)',
+  navbarText: 'rgb(227,227,227)',
+  primary: 'rgb(40,44,52)',
+  secondary: 'rgb(101,168,139)',
+  text: 'rgb(0,0,0)',
   articleBoxBackground: 'rgba(0,0,0,0.05)',
-  projectCardBGHover: 'rgb(101, 168, 139, .7)',
+  projectCardBGHover: 'rgb(101,168,139,0.7)',
+  projectCardSkillBackground: 'rgba(0,0,0,0.04)',
   projectCardBackground: 'rgba(0,0,0,0.04)',
-  projectCardsColor: '#e3e3e3'
+  projectCardsColor: 'rgb(227,227,227)'
 };
 
 const dark = {
-  background: '#282c34',
-  primary: '#e3e3e3',
-  secondary: '#65a88b',
-  navbarBG: '#282c34',
-  navbarText: '#e3e3e3',
-  text: '#e3e3e3',
+  background: 'rgb(40,44,52)',
+  primary: 'rgb(227,227,227)',
+  secondary: 'rgb(101,168,139)',
+  navbarBG: 'rgb(40,44,52)',
+  navbarText: 'rgb(227,227,227)',
+  text: 'rgb(227,227,227)',
   projectCardBackground: 'rgba(0,0,0,0.2)',
-  projectCardBGHover: 'rgb(101, 168, 139, .7)',
-  projectCardsColor: '#e3e3e3',
-  articleBoxBackground: '#e3e3e31A'
+  projectCardSkillBackground: 'rgba(227,227,227,0.1)',
+  projectCardBGHover: 'rgb(101, 168, 139,0.7)',
+  projectCardsColor: 'rgb(227,227,227)',
+  articleBoxBackground: 'rgba(227,227,227)'
 };
 
 const vulpisTheme: Theme = {
@@ -87,7 +89,7 @@ const vulpisTheme: Theme = {
       fontFamily: 'body',
       lineHeight: '.9rem',
       fontSize: '.9rem',
-      color: '#E32500'
+      color: 'rgb(227,37,0)'
     }
   },
   buttons: {
@@ -188,8 +190,8 @@ const vulpisTheme: Theme = {
         boxShadow: (t) => `0 0 0 2px ${t.colors.secondary}`,
         outline: 'none',
         '&.error': {
-          boxShadow: '0 0 0 2px #E32500',
-          borderColor: '#E32500'
+          boxShadow: '0 0 0 2px rgb(227,37,0)',
+          borderColor: 'rgb(227,37,0)'
         }
       },
       '&:-webkit-autofill': {
@@ -197,7 +199,7 @@ const vulpisTheme: Theme = {
         transitionProperty: 'background-color, color'
       },
       '&.error': {
-        borderColor: '#E32500'
+        borderColor: 'rgb(227,37,0)'
       }
     },
     textarea: {
@@ -210,12 +212,12 @@ const vulpisTheme: Theme = {
         boxShadow: (t) => `0 0 0 2px ${t.colors.secondary}`,
         outline: 'none',
         '&.error': {
-          boxShadow: '0 0 0 2px #E32500',
-          borderColor: '#E32500'
+          boxShadow: '0 0 0 2px rgb(227,37,0)',
+          borderColor: 'rgb(227,37,0)'
         }
       },
       '&.error': {
-        borderColor: '#E32500'
+        borderColor: 'rgb(227,37,0)'
       }
     }
   },
@@ -229,7 +231,7 @@ const vulpisTheme: Theme = {
       color: '#fff'
     },
     tertiary: {
-      bg: '#5FAAFA',
+      bg: 'rgb(95,170,250)',
       color: '#fff'
     },
     outline: {
@@ -243,7 +245,7 @@ const vulpisTheme: Theme = {
       boxShadow: 'inset 0 0 0 2px'
     },
     outlineTertiary: {
-      color: '#5FAAFA',
+      color: 'rgb(95,170,250)',
       bg: 'transparent',
       boxShadow: 'inset 0 0 0 2px'
     }
