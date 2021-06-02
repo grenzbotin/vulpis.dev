@@ -54,7 +54,9 @@ export const fetchAPI = async (path: string): Promise<Project[]> => {
 
   fetch(requestUrl)
     .then(response => response.json())
-    .then(data => data)
+    .then(data => {
+      return data;
+    })
     .catch((error) => {
       console.error('Error:', error);
       console.log(error);
