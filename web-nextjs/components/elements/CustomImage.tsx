@@ -33,32 +33,9 @@ const CustomImageWrapper = styled.div<ImageProps>`
 const CustomImage: React.FC<ImageProps> = ({ height, width, src, alt, layout, rounded }) => {
   return (
     <CustomImageWrapper height={height} width={width} rounded={rounded}>
-      <Image
-        title={alt}
-        alt={alt}
-        src={`/images/${src}`}
-        height={height}
-        width={width}
-        layout={layout}
-      />
+      <Image alt={alt} src={`/images/${src}`} height={height} width={width} layout={layout} />
     </CustomImageWrapper>
   );
 };
-
-// const CustomImage = styled.img<ImageProps>`
-//   height: ${props => props.height}px;
-//   width: ${props => props.width}px;
-//   border-radius: ${props => props.rounded ? props.height / 2 : 0}px;
-//   border-style: solid;
-//   border-color: #65a88b;
-//   @media screen and (min-width: 475px) {
-//     float: ${props => props.float ? props.float : 'right'};
-//     margin: 1rem 2rem;
-//   };
-//   @media screen and (max-width: 474px) {
-//     display: flex;
-//     margin: 0 auto;
-//   };
-// `;
 
 export default CustomImage;

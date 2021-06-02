@@ -73,14 +73,14 @@ const Footer: React.FC = () => {
           </Button>
           <Button
             href="https://stackoverflow.com/users/3228483/grenzbotin"
-            aria-label="Link: stack overflow"
-            title="stack overflow"
+            aria-label="Link: Stack Overflow Franziska Fieke"
+            title="Stack Overflow Franziska Fieke"
             target="_blank"
             rel="noreferrer"
             mL
           >
             <CustomIcon
-              alt="stack overflow: Franziska Fieke"
+              alt="Stack Overflow: Franziska Fieke"
               name="stackoverflow"
               width={16}
               height={16}

@@ -190,7 +190,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </>
         </Modal>
       )}
-      <StyledBox title={project.title}>
+      <StyledBox as="article" title={project.title}>
         <ImageContainer onClick={() => setOpen(true)}>
           {mainImageLoading && <ImagePlaceholder />}
           <Image

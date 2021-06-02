@@ -34,7 +34,7 @@ const Home: React.FC<HomeProps> = ({ headerElement, projects }) => {
       >
         <Heading element={headerElement} />
         <main>
-          <Box title={t('coding.title')} px={[4, 5, 6]} mb={5}>
+          <Box as="section" title={t('coding.title')} px={[4, 5, 6]} mb={5}>
             <H2>{t('coding.title')}</H2>
             <Text>
               <p>{t('coding.text_1')}</p>
@@ -55,7 +55,7 @@ const Home: React.FC<HomeProps> = ({ headerElement, projects }) => {
             </Text>
           </Box>
           <Grid gap={[4, 5, 6]} mb={5} px={[4, 5, 6]} columns={[1, 1, 1, 2]}>
-            <Box title={t('stack.title')}>
+            <Box as="section" title={t('stack.title')}>
               <H2>{t('stack.title')}</H2>
               <Text>{t('stack.text')}</Text>
               <Box title={t('experience.private.title')}>
@@ -66,31 +66,39 @@ const Home: React.FC<HomeProps> = ({ headerElement, projects }) => {
                 />
               </Box>
             </Box>
-            <Box title={t('offer.title')}>
+            <Box as="section" title={t('offer.title')}>
               <H2>{t('offer.title')}</H2>
-              <H3>{t('offer.subtitle_1')}</H3>
-              <Text>{t('offer.text_1')}</Text>
-              <H3>{t('offer.subtitle_2')}</H3>
-              <Text>{t('offer.text_2')}</Text>
-              <H3>{t('offer.subtitle_3')}</H3>
-              <Text>{t('offer.text_3')}</Text>
+              <section>
+                <H3>{t('offer.subtitle_1')}</H3>
+                <Text>{t('offer.text_1')}</Text>
+              </section>
+              <section>
+                <H3>{t('offer.subtitle_2')}</H3>
+                <Text>{t('offer.text_2')}</Text>
+              </section>
+              <section>
+                <H3>{t('offer.subtitle_3')}</H3>
+                <Text>{t('offer.text_3')}</Text>
+              </section>
             </Box>
           </Grid>
-          <Box title={t('experience.title')} px={[4, 5, 6]} mb={5}>
+          <Box as="section" title={t('experience.title')} px={[4, 5, 6]} mb={5}>
             <H2>{t('experience.title')}</H2>
             <Text>
               {t('experience.text_1')}
               <br />
               {t('experience.text_2')}
             </Text>
-            <H3>{t('experience.work_title')}</H3>
-            <Grid gap={[4, 5, 6]} mt={3} columns={[1, 1, 2, 2]}>
-              {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </Grid>
+            <section>
+              <H3>{t('experience.work_title')}</H3>
+              <Grid gap={[4, 5, 6]} mt={3} columns={[1, 1, 2, 2]}>
+                {projects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </Grid>
+            </section>
           </Box>
-          <Box px={[4, 5, 6]} mb={5}>
+          <Box as="section" title={t('contact.title')} px={[4, 5, 6]} mb={5}>
             <H2>{t('contact.title')}</H2>
             <Contact />
           </Box>
