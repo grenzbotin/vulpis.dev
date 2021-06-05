@@ -1,7 +1,7 @@
 module.exports = {
   siteUrl: 'https://vulpis.dev',
-  changefreq: 'daily',
-  priority: 0.7,
+  changefreq: 'monthly',
+  priority: 0.8,
   sitemapSize: 5000,
   generateRobotsTxt: true,
   exclude: ['/privacy', '/disclosure'],
