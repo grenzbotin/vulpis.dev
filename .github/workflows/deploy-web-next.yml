@@ -59,7 +59,6 @@ jobs:
           port: ${{ secrets.PORT_SSH }}
           envs: GITHUB_USERNAME, GITHUB_TOKEN, CR_PAT, REPO, USERNAME_SSH
           script: |
-            docker image prune -a -f
             docker login ghcr.io -u $GITHUB_USERNAME -p $CR_PAT
             docker pull ghcr.io/$REPO/web-nextjs:latest
             docker stop web-nextjs
