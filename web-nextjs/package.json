@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"postbuild": "next-sitemap --config sitemap-config.js",
+		"postbuild": "next-sitemap",
 		"start": "next start",
 		"lint": "eslint pages/* components/**/** components/** -c .eslintrc.json"
 	},
@@ -20,12 +20,12 @@
 		"react-dom": "17.0.1",
 		"react-obfuscate": "^3.6.8",
 		"theme-ui": "^0.6.1",
-		"typewriter-effect": "^2.17.0"
+		"typewriter-effect": "^2.17.0",
+		"next-sitemap": "^1.6.102"
 	},
 	"devDependencies": {
 		"@types/node": "^14.14.22",
 		"@types/react": "^17.0.0",
-		"next-sitemap": "^1.6.102",
 		"@types/theme-ui": "^0.3.7",
 		"@typescript-eslint/eslint-plugin": "^4.14.1",
 		"@typescript-eslint/parser": "^4.14.1",
