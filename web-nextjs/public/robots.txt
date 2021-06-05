@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /disclosure
+Disallow: /privacy
+
+# Host
+Host: https://www.vulpis.dev
+
+# Sitemaps
+Sitemap: https://www.vulpis.dev/sitemap.xml
