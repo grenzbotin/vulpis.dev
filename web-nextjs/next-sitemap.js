@@ -11,7 +11,7 @@ module.exports = {
       hreflang: 'de',
     },
     {
-      href: 'https://vulpis.dev/en',
+      href: 'https://vulpis.dev',
       hreflang: 'en',
     }
   ],
