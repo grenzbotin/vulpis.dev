@@ -4,14 +4,14 @@ import { Box, Container, Grid, Text } from 'theme-ui';
 import dynamic from 'next/dynamic';
 
 import { H2, H3 } from '../components/elements/Typography';
-import List from '../components/elements/List';
 import { fetchAPI, Project } from '../lib/api';
-import ProjectCard from '../components/elements/ProjectCard';
 
 const Heading = dynamic(() => import('../components/Heading'));
 const Contact = dynamic(() => import('../components/Contact'));
 const CustomImage = dynamic(() => import('../components/elements/CustomImage'));
 const HtmlHeader = dynamic(() => import('../components/elements/HtmlHeader'));
+const List = dynamic(() => import('../components/elements/List'));
+const ProjectCard = dynamic(() => import('../components/elements/ProjectCard'));
 
 interface HomeProps {
   headerElement: React.RefObject<HTMLDivElement>;
