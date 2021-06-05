@@ -9,6 +9,10 @@ module.exports = {
     {
       href: 'https://vulpis.dev/de',
       hreflang: 'de',
+    },
+    {
+      href: 'https://vulpis.dev/en',
+      hreflang: 'en',
     }
   ],
   robotsTxtOptions: {
