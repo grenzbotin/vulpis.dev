@@ -3,6 +3,7 @@ module.exports = {
   changefreq: 'monthly',
   priority: 0.8,
   generateRobotsTxt: true,
+  sitemapSize: 5000,
   exclude: ['/privacy', '/disclosure'],
   alternateRefs: [
     {
