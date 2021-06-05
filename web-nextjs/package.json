@@ -5,6 +5,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
+		"postbuild": "next-sitemap",
 		"start": "next start",
 		"lint": "eslint pages/* components/**/** components/** -c .eslintrc.json"
 	},
@@ -24,6 +25,7 @@
 	"devDependencies": {
 		"@types/node": "^14.14.22",
 		"@types/react": "^17.0.0",
+		"next-sitemap": "^1.6.102",
 		"@types/theme-ui": "^0.3.7",
 		"@typescript-eslint/eslint-plugin": "^4.14.1",
 		"@typescript-eslint/parser": "^4.14.1",
