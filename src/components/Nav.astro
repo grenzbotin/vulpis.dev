@@ -1,0 +1,201 @@
+---
+// Component Imports
+import { localizePath } from "astro-i18next";
+import { t } from "i18next";
+import LanguageSelector from "./LanguageSelector.astro";
+
+const { scrollEffect } = Astro.props;
+---
+
+<nav>
+  <div
+    id="inner_wrapper"
+    class:list={["inner_wrapper", { scroller: scrollEffect }]}
+  >
+    <div class:list={["nav__logo_name_wrapper", { visible: !scrollEffect }]}>
+      <a class="nav__logo_link" href={localizePath("/")}>
+        <img
+          class="nav__logo_image"
+          height="30px"
+          width="40.36px"
+          src="/assets/svg/logo.svg"
+          alt="vulpis.dev logo: fox face"
+        />
+      </a>
+      <div class="nav__logo_name">
+        vulpis development
+        <span class="nav__logo_name__sub">Franziska Fieke</span>
+      </div>
+    </div>
+  </div>
+  <ul class="nav__right">
+    <li>
+      <svg
+        id="nav_divider"
+        width="8"
+        height="22"
+        viewBox="0 0 8 22"
+        class:list={["divider", { dark: scrollEffect }]}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7.22361 0.44722L1.22361 3.44722M7.22361 18.4472L1.22361 21.4472M7.22361 12.4472L1.22361 15.4472M7.22361 6.44722L1.22361 9.44722M0.776398 3.44722L6.7764 6.44722M0.776398 9.44722L6.7764 12.4472M0.776398 15.4472L6.7764 18.4472"
+        ></path>
+      </svg><LanguageSelector showFlag={true} class="language-select" />
+    </li>
+  </ul>
+  <button class="hamburger" title={t("nav:btn_title_open_nav")}
+    ><img src="/assets/svg/hamburger.svg" alt="" width="12px" height="10px" />
+  </button>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    color: var(--c-primary-contrast);
+    height: 66px;
+  }
+
+  .inner_wrapper {
+    display: flex;
+    align-items: center;
+    padding: 1rem var(--p-container-x);
+    color: inherit;
+    position: fixed;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--c-dark-gray);
+    box-shadow: rgb(0 0 0 / 30%) 0px 2px 0px 0px;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+      top: 0;
+    }
+    to {
+      transform: translateY(-100%);
+      top: -100%;
+    }
+  }
+
+  .inner_wrapper.scroller {
+    top: -100%;
+  }
+
+  .inner_wrapper.slide_in {
+    top: 0;
+    animation: slideIn 0.5s;
+  }
+
+  .inner_wrapper.slide_up {
+    animation: slideUp 2s;
+  }
+
+  .nav__logo_name_wrapper {
+    display: flex;
+  }
+
+  .nav__logo_image {
+    height: 30px;
+    width: 40.36px;
+    margin-right: 1rem;
+  }
+
+  .nav__logo_name {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    line-height: 1rem;
+    font-family: "Zilla Slab";
+  }
+
+  .nav__logo_name__sub {
+    display: block;
+    color: var(--c-light-gray);
+  }
+
+  .divider {
+    stroke: var(--c-secondary);
+    stroke-width: 2;
+    margin-right: 0.5rem;
+    transition: stroke 400ms ease 100ms;
+  }
+
+  .divider.dark {
+    stroke: var(--c-dark-gray);
+  }
+
+  .nav__right {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: var(--p-container-x);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  .hamburger {
+    right: 0px;
+    position: fixed;
+    cursor: pointer;
+    margin: 1rem var(--p-container-x);
+  }
+
+  .expanded {
+    display: unset;
+  }
+
+  @media screen and (min-width: 636px) {
+    .nav__right {
+      display: flex;
+    }
+
+    .nav__right li:last-child {
+      display: flex;
+      align-items: center;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 635px) {
+    .nav__right {
+      top: 0px;
+      right: 0px;
+      padding: 60px 1rem 1rem 1rem;
+      background-color: var(--c-primary);
+      width: calc(100% - 2rem);
+    }
+
+    .nav__right li a.button {
+      display: flex;
+      margin-bottom: 0.5rem;
+    }
+
+    .divider {
+      display: none;
+    }
+  }
+</style>

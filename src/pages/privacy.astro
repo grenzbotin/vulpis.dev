@@ -1,0 +1,112 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import MainHead from "../components/MainHead.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+
+changeLanguage("en");
+---
+
+<html lang={i18next.language}>
+  <head>
+    <MainHead
+      title={t("privacy:meta.title")}
+      description={t("privacy:meta.description")}
+    />
+  </head>
+  <body>
+    <Nav />
+    <div class="wrapper main_content">
+      <h1>{t("privacy:title")}</h1>
+      <p>{t("privacy:intro")}</p>
+      <p>{t("privacy:accepting")}</p>
+
+      <h2>Accountable person</h2>
+      <p>
+        Accountable for the collection, processing and usage of your personal
+        data according to the art. 4 no. 7 GDPR is Franziska Fieke (see details
+        Legal Notice)
+      </p>
+
+      <h2>Hosting</h2>
+      <p>
+        My hoster collects the following data transmitted by your browser in
+        so-called log files:<br />
+        IP address, the address of the previously visited website (referer request
+        header), date and time of the request, time zone difference to Greenwich
+        Mean Time, content of the request, HTTP status code, amount of data transferred,
+        website from which the request came and information about the browser and
+        operating system.
+        <br />
+        This is necessary to display our website and to ensure stability and security.
+        This corresponds to our legitimate interest within the meaning of Art. 6
+        para. 1 p. 1 lit. f DSGVO.
+        <br />
+        There is no tracking and I do not have direct access to this data, but only
+        receive an anonymised statistical summary. This includes the address of the
+        previously visited page, the frequency of the pages called up in each case
+        and the number of unique visitors. I do not combine this data with other
+        data.
+        <br />
+        I use the following hoster for the provision of our website: <br />
+        <br />
+        GitHub Inc. <br />
+        88 Colin P Kelly Jr St <br />
+        San Francisco, CA 94107 <br />
+        United States <br /><br />
+        This is the recipient of your personal data. This corresponds to my legitimate
+        interest within the meaning of Art. 6 (1) sentence 1 lit. f DSGVO in not
+        having to maintain a server on our premises myself. The server is located
+        in the USA. <br />
+        <br />
+        You can find more information on objection and removal options vis-à-vis
+        GitHub at: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages.
+        <br />
+        <br />
+        You have the right to object to the processing. Whether the objection is
+        successful is to be determined within the framework of a balancing of interests.
+        <br />
+        The data will be deleted as soon as the purpose of the processing no longer
+        applies. <br /> The processing of the data provided under this section is
+        not required by law or contract. The functionality of the website is not
+        guaranteed without the processing. <br />
+        <br />GitHub has implemented compliance measures for international data
+        transfers. These apply to all global activities where GitHub processes
+        personal data of individuals in the EU. These measures are based on the
+        EU Standard Contractual Clauses (SCCs). For more information, please
+        visit:
+        https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1-the-standard-contractual-clauses-processors
+      </p>
+      <h2>Tracking and statistics</h2>
+      <p>
+        This website does not use tracking software or tracking pixel and
+        disclaim to use any form of fingerprinting for the purpose of data
+        collection.
+      </p>
+      <h2>Email communication</h2>
+      <p>
+        In case you are contacting me via email, I will save all your sent data
+        in my mailbox in order to be able to react appropriate to your request.
+        Emails that were sent are permanently stored in my mailbox. <br />
+        Please note: While communciating via email I can not ensure a complete data
+        protection. My mailbox is hosted with namecheap.com. For the purpose of data
+        processing Namecheap closes a Data Processing Agreement (DPA) that follows
+        the rules of the GDPR with its customers. I agree with Namecheaps' data processing
+        agreement
+      </p>
+      <h2>Right to information and cancellation</h2>
+      <p>
+        At any time any personal information that is stored in my mailbox can be
+        obtained. Next to it you have the right to ask me to correct and/or
+        delete that data. In case this is your wish, please write me a message.
+      </p>
+      <h2>Changes to the privacy declaration</h2>
+      <p>
+        In order to meet the legal requirements I may update the privacy policy
+        from time to time. Any changes to the privacy policy will be published
+        on this page and are effective once they are posted.
+      </p>
+    </div>
+    <Footer />
+  </body>
+</html>

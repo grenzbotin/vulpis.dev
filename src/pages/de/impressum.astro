@@ -1,0 +1,65 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import MainHead from "../../components/MainHead.astro";
+import Footer from "../../components/Footer.astro";
+import Nav from "../../components/Nav.astro";
+
+changeLanguage("de");
+---
+
+<html lang={i18next.language}>
+  <head>
+    <MainHead
+      title={t("legal:meta.title")}
+      description={t("legal:meta.description")}
+    />
+  </head>
+  <body>
+    <Nav />
+    <div class="wrapper main_content">
+      <h1>Impressum</h1>
+      <p>Angaben gemäß § 5 TMG</p>
+      {
+        i18next.language !== "de" && (
+          <p>
+            Please note: This page is only available in German since it is
+            legally required in German-language nations.
+          </p>
+        )
+      }
+      <p>
+        <b>vulpis development</b><br />
+        Franziska Fieke<br />
+        <a
+          href="mailto:\u0066\u0072\u0061\u006e\u007a\u0069\u0073\u006b\u0061\u0040\u0076\u0075\u006c\u0070\u0069\u0073\u002e\u0064\u0065\u0076"
+          >E-Mail</a
+        >
+      </p>
+      <p>
+        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br
+        />
+        DE337382011
+      </p>
+      <h2>Haftungsausschluss</h2>
+      <p>
+        Die Seite enthält Link zu Webseiten Dritter, auf deren Inhalte ich
+        keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch
+        keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets
+        der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die
+        verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche
+        Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der
+        Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der
+        verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer
+        Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von
+        Rechtsverletzungen werde ich derartige Links umgehend entfernen.
+      </p>
+      <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+      <p>
+        Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor
+        einer Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+    </div>
+
+    <Footer />
+  </body>
+</html>

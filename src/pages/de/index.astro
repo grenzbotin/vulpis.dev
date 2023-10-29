@@ -1,0 +1,123 @@
+---
+import i18next, { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+import MainHead from "../../components/MainHead.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import "../../styles/home.css";
+
+changeLanguage("de");
+---
+
+<html lang={i18next.language}>
+  <head>
+    <MainHead
+      title={t("home:meta.title")}
+      description={t("home:meta.description")}
+    />
+  </head>
+  <body>
+    <Nav scrollEffect />
+    <Header />
+    <main class="wrapper">
+      <div class="grid">
+        <section class="section">
+          <h2>{t("home:s1.title")}</h2>
+          <Trans i18nKey="s1.text" ns="home">
+            <p>
+              In the engineering world there is no one-stack-fits-all solution.
+              A bridge in Rome has to withstand other loads than a bridge in
+              Alaska - it is similar with software engineering. Every project
+              has different needs based on which the engineer should decide
+              wisely how she or he will meet them in order to deliver a
+              <strong class="word_highlight">high-quality</strong>, <strong
+                class="word_highlight">maintainable</strong
+              >
+              and <strong class="word_highlight">sustainable</strong> software solution.
+            </p>
+            <p>
+              Knowing that and based on a wide range of experience developing
+              various B2C and B2B applications I am happy to bring to the table:
+            </p>
+          </Trans>
+          <ul class="section__tech_stack">
+            {
+              ["frontend", "full_stack", "consulting"].map((field) => (
+                <li>
+                  <span>{t(`home:s1.${field}.icon`)}</span>
+                  <h3>{t(`home:s1.${field}.title`)}</h3>
+                  <ul>
+                    {[...Array(4).keys()].map((key) => (
+                      <li>{t(`home:s1.${field}.${key}`)}</li>
+                    ))}
+                  </ul>
+                </li>
+              ))
+            }
+          </ul>
+          <h2>{t(`home:contact.title`)}</h2>
+          <p>
+            <Trans i18nKey="contact.text" ns="home">
+              I am currently open for freelance work. Feel free to contact me
+              via <a
+                href="https://de.linkedin.com/in/franziska-fieke-809882114"
+                rel="noreferrer me">LinkedIn</a
+              >, <a
+                href="https://www.xing.com/profile/Franziska_Fieke"
+                rel="noreferrer me">Xing</a
+              > or via <a
+                href="mailto:\u0066\u0072\u0061\u006e\u007a\u0069\u0073\u006b\u0061\u0040\u0076\u0075\u006c\u0070\u0069\u0073\u002e\u0064\u0065\u0076"
+                >email</a
+              >
+            </Trans>
+          </p>
+          <p>
+            {t(`home:contact.disclaimer`)}
+          </p>
+        </section>
+        <section class="section about">
+          <h2>{t("home:about_title")}</h2>
+          <div class="about__profile_image">
+            <div class="about__profile_image_flip">
+              <div class="about__profile_image_flip-inner">
+                <div class="about__profile_image_front">
+                  <img
+                    src="/assets/profile.webp"
+                    alt="Franziska Fieke"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="about__profile_image_back"></div>
+              </div>
+            </div>
+          </div>
+          <p class="bio">
+            <Trans i18nKey="about_text" ns="home">
+              <span>Hello!</span> I am Fran, a software and web engineer from Germany,
+              passionated in developing intutive, high performance digital experiences
+              for <strong class="word_highlight">web</strong> & <strong
+                class="word_highlight">mobile</strong
+              > for more than
+              <strong class="number_highlight">7</strong> years.
+            </Trans>
+          </p>
+          <h3>{t("home:about_tech_stack_title")}.</h3>
+          <ul class="section__short_tech">
+            {
+              [...Array(6).keys()].map((key) => (
+                <li>{t(`home:about_tech_stack_${key}`)}</li>
+              ))
+            }
+          </ul>
+        </section>
+      </div>
+    </main>
+    <Footer />
+    <script>
+      import "@scripts/themeSwitcher.ts";
+      import "@scripts/navSlider.ts";
+      import "@scripts/nav.ts";
+    </script>
+  </body>
+</html>

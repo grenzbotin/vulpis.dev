@@ -1,0 +1,186 @@
+---
+import { t } from "i18next";
+import { localizePath } from "astro-i18next";
+---
+
+<footer>
+  <svg
+    class="footer_bg"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"
+    preserveAspectRatio="none"
+  >
+    <polygon fill="var(--t-fg)" points="5,10 0,101 25,101"></polygon>
+    <polygon fill="var(--c-secondary)" points="10,101 20,40 40,101"></polygon>
+    <polygon fill="var(--t-fg)" points="30,101 50,60 60,101"></polygon>
+  </svg>
+  <div class="footer__wrapper">
+    <div class="footer__logo_name">
+      vulpis development
+      <span class="footer__logo_name__sub">Franziska Fieke</span>
+    </div>
+    <div class="footer__right">
+      <a
+        href="https://de.linkedin.com/in/franziska-fieke-809882114"
+        class="iconbutton"
+        rel="noreferrer me"
+        title={t("footer:link_title_linkedin")}
+        ><img
+          height="16px"
+          width="16px"
+          alt="linkedin icon"
+          src="/assets/svg/linkedin.svg"
+        />
+      </a>
+      <a
+        href="https://www.xing.com/profile/Franziska_Fieke"
+        class="iconbutton"
+        rel="noreferrer me"
+        title={t("footer:link_title_xing")}
+        ><img
+          height="16px"
+          width="16px"
+          alt="xing icon"
+          src="/assets/svg/xing.svg"
+        />
+      </a>
+      <a
+        href="https://stackoverflow.com/users/3228483/grenzbotin"
+        class="iconbutton"
+        rel="noreferrer me"
+        title={t("footer:link_title_stackoverflow")}
+        ><img
+          height="16px"
+          width="16px"
+          alt="stackoverflow icon"
+          src="/assets/svg/stackoverflow.svg"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href={localizePath("/legal-notice")}
+              >{t("footer:legal-notice")}</a
+            >
+          </li><li>
+            <a href={localizePath("/privacy")}>{t("footer:privacy")}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+<style>
+  .footer__wrapper {
+    padding: var(--p-container-y) var(--p-container-x);
+    background-color: var(--t-footer-bg);
+    color: var(--c-primary-contrast);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .footer_bg {
+    margin-bottom: -5px;
+    width: 100%;
+    height: 140px;
+  }
+
+  @media screen and (max-width: 799px) {
+    .footer_bg {
+      height: 100px;
+    }
+  }
+
+  .footer__logo_name {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    line-height: 1rem;
+    font-family: "Zilla Slab";
+  }
+
+  .footer__logo_name__sub {
+    display: block;
+    color: var(--c-light-gray);
+  }
+
+  .footer__right {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .footer__right nav ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 1.5rem;
+    list-style-type: none;
+  }
+
+  .footer__right nav ul li a {
+    text-decoration: none;
+  }
+
+  .footer__right nav ul li:before {
+    content: "▴";
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    color: var(--c-secondary);
+  }
+</style>
+<script is:inline>
+  const html = document.querySelector("html");
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    localStorage.setItem("theme", "light");
+    html?.classList.remove("dark");
+  } else {
+    localStorage.setItem("theme", "dark");
+    html?.classList.add("dark");
+  }
+</script>
+<script>
+  console.log(`
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒░░░░░░░
+░░░░░░░▓▓▓▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▓▓▓░░░░░░░
+░░░░░░░▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓▓▓░░░░░░░
+░░░░░░░▓▓▓▓▒░▒▓▒░░░░░░░░░░░░░░░░░░░░▒▓▒░▒▓▓▓▓░░░░░░░
+░░░░░░░▒▓▒░░░▒▓▓▓▒░░░░░░░░░░░░░░░░▒▓▓▓▒░░░▒▓▓░░░░░░░
+░░░░░░░▒▒░░░░▒▓▓▓▓▓▓▒░░░░░░░░░░▒▓▓▓▓▓▓▒░░░░▒▒░░░░░░░
+░░░░░░░▒▓▓▒░░▒▓▓▓▓▓▓▓▓▒░░░░░░▒▓▓▓▓▓▓▓▓▒░░▒▓▓▒░░░░░░░
+░░░░░░░▒▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▒▒▓▓▓▓▒░░░░░░░
+░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░
+░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░
+░░░░░░░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░
+░░░░░▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░░░░░
+░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓ Hello again! ✌️ ▓▓▓▓▓▓▓▓▓▒▒▒▒░░░
+░░░▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓                 ▓▓▓▓▓▓▓▓▓▒▒▒▒░░░
+░░░░░▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░░░░░
+░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░
+░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░
+░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░
+░░░░░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▒░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░▒▒▓▓▓▓▓▓▓▓▒▒░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░▒▒▒▒▓▓▓▓▒▒▒▒░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░`);
+</script>

@@ -1,0 +1,37 @@
+---
+import { localizePath } from "astro-i18next";
+import i18next, { t } from "i18next";
+
+const pathname = Astro.url.pathname;
+const switchTo = i18next.language === "de" ? "en" : "de";
+const newPath = localizePath(pathname, switchTo);
+---
+
+<a
+  id="lang"
+  href={newPath}
+  title={t("nav:language_toggle_title")}
+  class="button language_selector"
+>
+  <img
+    class="flag"
+    alt=""
+    width="15px"
+    height="17px"
+    src={`/assets/svg/${switchTo}.svg`}
+  />
+  {t("nav:language_toggle_label")}
+</a>
+
+<style>
+  .language_selector {
+    font-size: 0.9rem;
+    min-width: calc(68px - 2rem);
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .flag {
+    width: 15px;
+  }
+</style>

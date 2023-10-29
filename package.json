@@ -1,0 +1,24 @@
+{
+  "name": "@example/portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lang": "astro-i18next generate"
+  },
+  "devDependencies": {
+    "astro": "^2.7.0",
+    "prettier": "^2.8.1",
+    "prettier-plugin-astro": "^0.7.0"
+  },
+  "dependencies": {
+    "astro-compress": "^1.1.47",
+    "astro-i18next": "^1.0.0-beta.21",
+    "gsap": "^3.11.3"
+  }
+}

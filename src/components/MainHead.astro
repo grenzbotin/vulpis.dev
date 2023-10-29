@@ -1,0 +1,24 @@
+---
+import "../styles/global.css";
+import { HeadHrefLangs } from "astro-i18next/components";
+const {
+  title = "vulpis development | Franziska Fieke",
+  description = "Webseiten- und Anwendungsentwicklung mit Fokus auf Performance, Green Tech, Barrierefreiheit und Design.",
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- CSP -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline'; form-action 'self'; font-src 'self'"
+/>
+
+<title>{title}</title>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<HeadHrefLangs />

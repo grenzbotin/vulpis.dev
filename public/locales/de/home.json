@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "vulpis development | Franziska Fieke",
+    "description": "Franziska Fieke ist eine erfahrene Web- und Softwareentwicklerin von web und mobilen Apps für B2B und B2C."
+  },
+  "theme_switch_on": "*an",
+  "theme_switch_off": "*aus",
+  "img_alt_logo": "Das vulpis development Logo zeigt einen Fuchskopf in Pixelgrafik auf einem runden Hintergrund.",
+  "s1": {
+    "title": "Software-Entwicklung nach Maß",
+    "text": "<0>In der Welt des Ingenieurwesens gibt es keine Einheitslösung für alle Projekte. Eine Brücke in Alaska muss etwa anderen Belastungen trotzen als eine Brücke in Rom - ähnlich verhält es sich auch in der Software-Entwicklung. Jedes Projekt hat andere Voraussetzungen und Anforderungen auf die sich der Entwickler einstellen muss, um optimale Lösungsansätze zu finden und eine <1>hochwertige</1>, <2>wartungsfreundliche</2> und <3>nachhaltige</3> Softwarelösung zu schreiben.</0><4>Mit diesem Bewusstsein und einer langjährigen Erfahrung im Entwickeln verschiedener B2C- und B2B-Anwendungen kann ich Ihnen heute folgende Schwerpunkte meiner Arbeit anbieten:</4>",
+    "frontend": {
+      "icon": "💪",
+      "title": "Frontend-Entwicklung",
+      "0": "React & React Native Entwicklung",
+      "1": "Web Standards & Barrierefreiheit",
+      "2": "Performance & SEO",
+      "3": "Designsystem-Integration"
+    },
+    "full_stack": {
+      "icon": "🧱",
+      "title": "Full-Stack Entwicklung",
+      "0": "Node.js & backend Entwicklung",
+      "1": "Datenstruktur und -fluss Layout",
+      "2": "Headless CMS und Static site generation",
+      "3": "DevOps & deployment"
+    },
+    "consulting": {
+      "icon": "📜",
+      "title": "Beratung & Architektur",
+      "0": "Technische Projektplanung & Produktkonzeption",
+      "1": "Technische Dokumentation",
+      "2": "Mentor & Begleitung von Junior-Entwicklern",
+      "3": "Nachhaltige Webentwicklung"
+    }
+  },
+  "about_title": "Entwicklung ist Leidenschaft und Leidenschaft ist des Lebens Poesie.",
+  "about_text": "<0>Hi!</0> Ich bin Franziska, Software-Entwicklerin für die Entwicklung von <1>Web-Anwendungen</1> und <2>mobilen Apps</2> mit Fokus auf das Frontend und über <3>7</3> Jahren professioneller Erfahrung.",
+  "about_tech_stack_title": "Tech Stack in Kürze",
+  "about_tech_stack_0": "Sprachen: Javascript, Typescript, HTML, CSS",
+  "about_tech_stack_1": "React.js, Next.js, Node.js, React-Native, Astro",
+  "about_tech_stack_2": "Testen: Jest, Cypress",
+  "about_tech_stack_3": "State management: Redux (RTK)",
+  "about_tech_stack_4": "Headless CMS: Strapi CMS",
+  "about_tech_stack_5": "Anderes: CI/CD, Docker, Github",
+  "contact": {
+    "title": "Haben Sie Interesse an einer Zusammenarbeit?",
+    "text": "Zur Zeit bin ich offen für Freelance-Arbeiten. Kontaktieren Sie mich gern via <0>LinkedIn</0>, <1>Xing</1> oder über <2>E-Mail</2>.",
+    "disclaimer": "Falls Sie für eine Non-Profit-Organisation arbeiten oder etwas im Kopf haben, um die Welt zu einem besseren Ort zu machen - zögern Sie nicht, mich zu kontaktieren und mir von Ihrer Idee zu erzählen - ich freue mich darauf, Projekte mit einem sozialen, kulturellen oder ökologischen Hintergrund zu unterstützen. Auch, falls Sie meine Unterstützung nicht benötigen - lassen Sie mich Ihnen sagen: Bleiben Sie am Ball! Die Welt braucht Menschen wie Sie."
+  }
+}

@@ -1,0 +1,269 @@
+/* Global variables */
+:root {
+  /* Colors */
+  --c-primary: #282c34;
+  --c-primary-contrast: #e9e9e9;
+
+  --c-secondary: #66a88c;
+  --c-secondary-contrast: var(--c-primary);
+
+  --c-pink: #a8668a;
+  --c-blue: #6688a8;
+  --c-green: #66a88c;
+
+  --c-dark-gray: #20232a;
+  --c-medium-dark-gray: #282c34;
+  --c-light-gray: #adadad;
+  --c-very-light-gray: #e7e7e7;
+
+  /* Fonts */
+  --f-base: 16px;
+  --f-h2: 2rem;
+  --f-h2-sm: 1.45rem;
+  --f-h3: 1.5rem;
+  --f-h3-sm: 1.4rem;
+  --f-sm: 0.9rem;
+  --f-s: 0.8rem;
+  --f-xs: 0.7rem;
+
+  --t-fg: var(--c-primary);
+  --t-bg: var(--c-primary-contrast);
+  --t-subdue: var(--c-white);
+  --t-active: var(--c-blue);
+  --t-footer-bg: var(--c-dark-gray);
+
+  --p-y: 16px;
+  --p-s: 32px;
+  --p-m: 64px;
+  --p-lg: 128px;
+
+  --p-container-x: var(--p-m);
+  --p-container-y: var(--p-s);
+  --p-container-m: var(--p-m);
+  --p-container-lg-x: var(--p-lg);
+
+  --w-max: 1250px;
+}
+
+html.dark {
+  --t-fg: var(--c-primary-contrast);
+  --t-bg: var(--c-primary);
+  --t-subdue: var(--c-gray);
+  --t-active: var(--c-blue);
+}
+
+@media screen and (max-width: 799px) {
+  :root {
+    --p-container-x: var(--p-s);
+    --p-container-y: var(--p-y);
+    --p-container-m: var(--p-s);
+    --p-container-lg-x: var(--p-m);
+  }
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src: local("Zilla Slab Light"),
+    url("/fonts/ZillaSlab-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  src: local("Zilla Slab Medium"),
+    url("/fonts/ZillaSlab-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Zilla Slab Highlight";
+  src: local("Zilla Slab Highlight"),
+    url("/fonts/ZillaSlabHighlight-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: local("Raleway Light"),
+    url("/fonts/Raleway-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  color: var(--t-fg);
+  font-family: "Raleway", sans-serif;
+  font-size: var(--f-base);
+  background: var(--t-bg);
+}
+
+* {
+  box-sizing: content-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+a:hover,
+:focus {
+  color: var(--c-secondary);
+  cursor: url("/assets/fox_hand.png"), auto;
+}
+
+a.textlink::before {
+  content: "🔗 ";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Zilla Slab Highlight";
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 4rem 0 2rem 0;
+}
+
+h2 {
+  font-size: var(--f-h2);
+}
+
+@media screen and (max-width: 799px) {
+  h2 {
+    font-size: var(--f-h2-sm);
+  }
+}
+
+h2::before {
+  content: "\00a0 > ";
+  color: var(--c-secondary);
+  display: inline;
+  padding-right: 0.3rem;
+}
+
+h2:hover::before {
+  color: var(--c-blue);
+  transition: color 400ms linear;
+}
+
+h3 {
+  font-size: var(--f-h3);
+  color: var(--t-fg);
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  line-height: 2;
+}
+
+.wrapper {
+  max-width: var(--w-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--p-container-lg-x);
+}
+
+@media screen and (max-width: 799px) {
+  h3 {
+    font-size: var(--f-h3-sm);
+  }
+
+  .wrapper {
+    padding: 0 var(--p-container-m);
+  }
+}
+
+.main_content {
+  padding-top: var(--p-container-m);
+}
+
+button {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: var(--c-medium-dark-gray);
+  border: 2px solid var(--c-medium-dark-gray);
+  padding: 0.5rem 1rem;
+  position: relative;
+  display: inline-block;
+  cursor: url("/assets/fox_hand.png"), auto;
+}
+
+button:hover,
+button:focus {
+  background: var(--c-secondary);
+  border-color: var(--c-secondary);
+}
+
+a.iconbutton {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 0px 0px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: var(--c-medium-dark-gray);
+  border: 2px solid var(--c-medium-dark-gray);
+  position: relative;
+  min-height: 40px;
+  min-width: 50px;
+  display: inline-block;
+  cursor: url("/assets/fox_hand.png"), auto;
+}
+
+a.iconbutton img {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+a.button {
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 1px 0px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background-color: var(--c-medium-dark-gray);
+  border: 2px solid var(--c-medium-dark-gray);
+  color: var(--c-very-light-gray);
+  position: relative;
+  text-decoration: none;
+  cursor: url("/assets/fox_hand.png"), auto;
+}
+
+a.button:hover,
+a.button:focus,
+a.button.active,
+a.iconbutton:hover,
+a.iconbutton:focus {
+  background: var(--c-secondary);
+  border-color: var(--c-secondary);
+  color: var(--c-very-light-gray);
+}
+
+.number_highlight {
+  color: var(--c-secondary);
+  font-family: "Zilla Slab";
+  font-weight: 900;
+  font-size: 2.3rem;
+  line-height: 0;
+  margin: 0 0.2rem 0 0.4rem;
+}
+
+.word_highlight {
+  color: var(--c-secondary);
+  font-family: "Zilla Slab";
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
+}
