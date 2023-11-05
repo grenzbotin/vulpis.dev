@@ -1,7 +1,7 @@
 ---
 ---
 
-<div class="logo_wrapper">
+<button class="logo_wrapper" aria-label="Switch theme">
   <svg
     id="logo"
     width="262"
@@ -196,16 +196,21 @@
       </g>
     </g>
   </svg>
-  <span id="click_text" class="click_text"></span>
-</div>
+  <span aria-hidden="true" id="click_text" class="click_text"></span>
+</button>
 
 <style>
   .logo_wrapper {
     position: relative;
     width: fit-content;
+    box-shadow: none;
+    background-color: inherit;
+    border: 0;
   }
   .logo_wrapper:hover {
     cursor: pointer;
+    background-color: inherit;
+    border: 0;
   }
   svg.focus-visible {
     outline: 4px dashed black;
